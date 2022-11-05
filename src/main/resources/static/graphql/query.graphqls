@@ -2,8 +2,8 @@ extend type Query {
 	questionCategories: [QuestionCategory!]!
 	questionCategory(uuid: Uuid!): QuestionCategory
 	
-	locations: [Location!]!
-	location(uuid: Uuid!): Location
+#	locations: [Location!]!
+#	location(uuid: Uuid!): Location
 }
 
 type QuestionCategory {
@@ -14,88 +14,13 @@ type QuestionCategory {
 	name: String!
 	shortName: String
 	fileName: String
-	questionCards: [QuestionCard!]
+	questions: [Question!]
 }
 
-type QuestionCard {
+type Question {
 	uuid: Uuid!
-	code: String!
-	name: String!
-	description: [String!]
-	
-	isCore: Boolean
-	owner: [String!]
-	formula: [String!]
-	measurementProcess: [String!]
-	monitoringInterval: [String!]
-	reportingToScis: String
-	measurementUnits: [MeasurementUnits]
-	thresholdTargetValue: String
-	stakeholders: Stakeholders 
-	spacialScaleOfEvaluation: SpacialScaleOfEvaluation
-	typeOfIndicator: TypeOfIndicator
-	temporalScaleOfEvaluation: TemporalScaleOfEvaluation
-}
-
-type MeasurementUnits {
-	name: String
-	isDefault: Boolean
-	isLikert: Boolean
-}
-
-type Stakeholders {
-	energyUtilities: Boolean
-	consumers: Boolean
-	technologyProviders: Boolean
-	policyMakingBodies: Boolean
-	representativeCitizenGroups: Boolean
-	citizenAmbassadors: Boolean
-}
-
-type SpacialScaleOfEvaluation {
-	buildingLevel: Boolean
-	buildingBlockLevel: Boolean
-	districtLevel: Boolean
-	cityLevel: Boolean
- }
- 
-type TypeOfIndicator {
-	output: Boolean
-	impact: Boolean
-}
- 
-type TemporalScaleOfEvaluation {
-	inProjectTimeframe: Boolean
-	endOfProject: Boolean
-	postProject: Boolean
-}
-
-type LocationSet {
-	rootLocations: [Location!]!
-}
-
-type Location {
-	uuid: Uuid!
-	code: String
-	type: String!
-	name: String!	
-	description: String
-	geoJsonId: String
-	geoJsonData: JSON
-	children: [Location!]
-	
-	questionRecordGroups: [QuestionRecordGroup!]!
-	questionRecordGroup(questionCardUuid: Uuid!): QuestionRecordGroup!
-}
-
-type QuestionRecordGroup {
-	location: Location!
-	questionCard: QuestionCard!
-	questionRecords(start: DateTime, end: DateTime, limit: Int): [QuestionRecord!]!
-	size: Int! 
-}
-
-type QuestionRecord {
-	timestamp: DateTime
-	value: Float
+	ref: Uri!
+	typeRef: Uri!
+	text: String!
+	type: String
 }

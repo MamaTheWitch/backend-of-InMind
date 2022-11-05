@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import org.apache.jena.ontology.OntClass;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.junction2022.common.exceptions.InvalidDataException;
 import com.junction2022.repositories.rdf.FreshAirOntology;
 
 import lombok.Getter;
@@ -50,5 +51,40 @@ public class Survey extends FreshAirEntity {
 	public OntClass getTypeRef() {
 		return FreshAirOntology.Metadata.Survey;
 	}
-
+	
+	public int getMaxPoint() {
+		int sum = 0;
+		if (questions != null) {			
+			for (final Question question : questions) {
+				sum += question.getMax();
+			}
+		}
+		return sum;
+	}
+	
+	public MentalSuggestion findSuggestion(SurveyResult surveyResult) {
+		double totalPoint = surveyResult.getTotalPoint();
+		double maxPoint = getMaxPoint();
+		return findSuggestionByPoint(totalPoint / maxPoint * 100.0);
+	}
+	
+	public MentalSuggestion findSuggestionByPoint(double percentagePoint) {
+		MentalSuggestion suggestion = null;
+		if (suggestions != null) {
+			suggestion = 
+				suggestions
+					.stream()
+					.sorted()
+					.filter(s -> percentagePoint < s.getMaxPercentage())
+					.findFirst()
+					.orElse(null);
+		}
+		
+		if (suggestion == null) {
+			throw new InvalidDataException("No correct suggestion found");
+		}
+		
+		return suggestion;
+	}
+	
 }

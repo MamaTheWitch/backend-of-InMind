@@ -7,15 +7,15 @@ import org.apache.jena.rdf.model.Resource;
 
 import com.junction2022.models.Question;
 
-public class QuestionCardPayLoad extends FreshAirEntityPayLoad<Question> {
+public class QuestionPayLoad extends FreshAirEntityPayLoad<Question> {
 
-	public QuestionCardPayLoad(
+	public QuestionPayLoad(
 			final Resource recordRef,
 			final Function<Resource, Optional<Question>> recordSupplier) {
 		super(recordRef, recordSupplier);
 	}
 
-	public QuestionCardPayLoad(final Question entity) {
+	public QuestionPayLoad(final Question entity) {
 		super(entity);
 	}
 

@@ -11,16 +11,16 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class QuestionCategorySet {
+public class SurveySet {
 
 	@Getter
-	private final List<QuestionCategory> questionCategories;
+	private final List<Survey> surveys;
 
 	private Map<UUID, Question> flatQuestionMap;
 
 
-	public Optional<QuestionCategory> getQuestionCategory(final UUID categoryUuid) {
-		return getQuestionCategories()
+	public Optional<Survey> getSurvey(final UUID categoryUuid) {
+		return getSurveys()
 				.stream()
 				.filter(category -> category.getUuid().equals(categoryUuid))
 				.findFirst();
@@ -31,7 +31,7 @@ public class QuestionCategorySet {
 	// Question cards
 	/////////////////////////////////
 
-	public Optional<Question> getQuestion(final QuestionCategory category, final UUID questionUuid) {
+	public Optional<Question> getQuestion(final Survey category, final UUID questionUuid) {
 		return category
 				.getQuestions()
 				.stream()
@@ -43,7 +43,7 @@ public class QuestionCategorySet {
 		if (flatQuestionMap == null) {
 			flatQuestionMap = new HashMap<>();
 
-			for (final QuestionCategory category : getQuestionCategories()) {
+			for (final Survey category : getSurveys()) {
 				final List<Question> questions = category.getQuestions();
 				if (questions != null) {
 					for (final Question question : questions) {

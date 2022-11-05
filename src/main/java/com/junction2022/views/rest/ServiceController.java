@@ -6,7 +6,7 @@
 //import com.junction2022.common.exceptions.ResourceNotFoundException;
 //import com.junction2022.models.Question;
 //import com.junction2022.models.QuestionAnswer;
-//import com.junction2022.models.QuestionairResult;
+//import com.junction2022.models.SurveyResult;
 //import com.junction2022.models.MentalService;
 //import com.junction2022.repositories.file.MetadataFileRepository;
 //import com.junction2022.repositories.rdf.QuestionRecordRdfRepository;
@@ -80,7 +80,7 @@
 //				questionRecordRdfRepository
 //					.getQuestionRecordGroups(service)
 //					.stream()
-//					.map(QuestionairResult::getQuestion)
+//					.map(SurveyResult::getQuestion)
 //					.sorted()
 //					.map(Question::asShortMap)
 //					.toList();
@@ -98,11 +98,11 @@
 //
 //		final Question question =
 //				metadataFileRepository
-//					.getQuestionCategorySet()
+//					.getSurveySet()
 //					.getQuestion(UUID.fromString(questionUuid))
 //					.orElseThrow(() -> new ResourceNotFoundException("Question card not found: " + questionUuid));
 //
-//		final QuestionairResult questionRecordGroup = new QuestionairResult(service, question);
+//		final SurveyResult questionRecordGroup = new SurveyResult(service, question);
 //		return questionRecordRdfRepository.getQuestionRecords(questionRecordGroup, Optional.empty(), Optional.empty(), Optional.empty());
 //	}
 //
@@ -120,11 +120,11 @@
 //
 //		final Question question =
 //				metadataFileRepository
-//					.getQuestionCategorySet()
+//					.getSurveySet()
 //					.getQuestion(UUID.fromString(questionUuid))
 //					.orElseThrow(() -> new ResourceNotFoundException("Question card not found: " + questionUuid));
 //
-//		final QuestionairResult questionRecordGroup = new QuestionairResult(service, question);
+//		final SurveyResult questionRecordGroup = new SurveyResult(service, question);
 //		return questionRecordRdfRepository.getQuestionRecords(questionRecordGroup, Optional.empty(), Optional.empty(), Optional.empty());
 //	}
 //

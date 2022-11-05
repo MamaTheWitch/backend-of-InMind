@@ -16,8 +16,8 @@ import org.springframework.stereotype.Service;
 
 import com.junction2022.common.exceptions.InvalidDataException;
 import com.junction2022.models.Question;
-import com.junction2022.models.QuestionCategory;
-import com.junction2022.models.QuestionCategorySet;
+import com.junction2022.models.Survey;
+import com.junction2022.models.SurveySet;
 import com.junction2022.models.MentalService;
 import com.junction2022.models.MentalServiceSet;
 import com.junction2022.repositories.file.esdl.EsdlUtils;
@@ -35,7 +35,7 @@ public class MetadataFileRepository {
 			"services.yaml",
 		};
 
-	private QuestionCategorySet questionCategorySet;
+	private SurveySet surveySet;
 	private MentalServiceSet serviceSet;
 
 	private static InputStream getResourceInputStream(final String path) throws IOException {
@@ -48,23 +48,23 @@ public class MetadataFileRepository {
 	// Question categories
 	/////////////////////////////////
 
-	public synchronized QuestionCategorySet getQuestionCategorySet() throws InvalidDataException {
-		if (questionCategorySet == null) {
+	public synchronized SurveySet getSurveySet() throws InvalidDataException {
+		if (surveySet == null) {
 			try {
-				questionCategorySet = readStaticQuestionCategorySet();
+				surveySet = readStaticSurveySet();
 			} catch (final IOException e) {
 				throw new InvalidDataException("Error reading static Question categories: " + e.getMessage(), e);
 			}
 		}
-		return questionCategorySet;
+		return surveySet;
 	}
 
 
-	private QuestionCategorySet readStaticQuestionCategorySet() throws IOException {
+	private SurveySet readStaticSurveySet() throws IOException {
 		try (final var categoriesInputStream = getResourceInputStream(CATEGORIES_FILE_NAME)) {
-			final QuestionCategory[] categories = YamlUtils.readYaml(categoriesInputStream, QuestionCategory[].class);
+			final Survey[] categories = YamlUtils.readYaml(categoriesInputStream, Survey[].class);
 			if (categories != null) {
-				for (final QuestionCategory category : categories) {
+				for (final Survey category : categories) {
 					if (category.getFileName() != null) {						
 						try (final var categoryInputStream = getResourceInputStream(category.getFileName())) {
 							final Question[] cards = YamlUtils.readYaml(categoryInputStream, Question[].class);
@@ -72,9 +72,9 @@ public class MetadataFileRepository {
 						}
 					}
 				}
-				return new QuestionCategorySet(Arrays.asList(categories));
+				return new SurveySet(Arrays.asList(categories));
 			}
-			return new QuestionCategorySet(Arrays.asList());
+			return new SurveySet(Arrays.asList());
 		}
 	}
 

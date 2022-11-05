@@ -15,9 +15,9 @@ package com.junction2022.repositories.rdf;
 //
 //import fi.vtt.bimlinker.rdf.jena.provider.ModelConnection;
 //import com.junction2022.models.Question;
-//import com.junction2022.models.QuestionCategory;
+//import com.junction2022.models.Survey;
 //import com.junction2022.models.payload.QuestionPayLoad;
-//import com.junction2022.models.payload.QuestionCategoryPayLoad;
+//import com.junction2022.models.payload.SurveyPayLoad;
 //import com.junction2022.repositories.rdf.FreshAirOntology.Metadata;
 //
 //@MentalService
@@ -27,22 +27,22 @@ package com.junction2022.repositories.rdf;
 //		return application.openJenaModel(Metadata.NAMESPACE_URI);
 //	}
 //
-//	public QuestionCategoryPayLoad createQuestionCategory(final QuestionCategory questionCategory) {
+//	public SurveyPayLoad createSurvey(final Survey survey) {
 //		final Model model = ModelFactory.createDefaultModel();
 //
-//		final Resource questionCategoryResource =
+//		final Resource surveyResource =
 //				model
-//					.createResource(questionCategory.getUri())
-//						.addProperty(RDF.type, questionCategory.getTypeRef())
-//						.addProperty(RDFS.label, questionCategory.getName());
+//					.createResource(survey.getUri())
+//						.addProperty(RDF.type, survey.getTypeRef())
+//						.addProperty(RDFS.label, survey.getName());
 //
 //		RdfRepositoryUtils
 //			.mapOptionalPropertiesToResource(
-//				questionCategory, questionCategoryResource,
+//				survey, surveyResource,
 //				Map.of(
-//						Metadata.hasCode, QuestionCategory::getCode,
-//						Metadata.hasShortName, QuestionCategory::getShortName,
-//						Metadata.storedInFile, QuestionCategory::getFileName
+//						Metadata.hasCode, Survey::getCode,
+//						Metadata.hasShortName, Survey::getShortName,
+//						Metadata.storedInFile, Survey::getFileName
 //				)
 //			);
 //
@@ -50,10 +50,10 @@ package com.junction2022.repositories.rdf;
 //			modelConnection.pushStatements(model);
 //		}
 //
-//		return new QuestionCategoryPayLoad(questionCategory);
+//		return new SurveyPayLoad(survey);
 //	}
 //
-//	public List<QuestionCategory> getQuestionCategories() {
+//	public List<Survey> getSurveys() {
 //
 //		final var sparql =
 //				nameFormatter
@@ -64,7 +64,7 @@ package com.junction2022.repositories.rdf;
 //							FROM md:
 //							WHERE {
 //									?ref
-//										a ?QuestionCategory ;
+//										a ?Survey ;
 //										rdfs:label ?name .
 //
 //									OPTIONAL { ?ref ?hasCode ?code }
@@ -74,7 +74,7 @@ package com.junction2022.repositories.rdf;
 //							""",
 //							null,
 //							Map.of(
-//								"QuestionCategory", Metadata.QuestionCategory,
+//								"Survey", Metadata.Survey,
 //								"hasCode", Metadata.hasCode,
 //								"hasShortName", Metadata.hasShortName,
 //								"storedInFile", Metadata.storedInFile
@@ -86,33 +86,33 @@ package com.junction2022.repositories.rdf;
 //						.mapResultSetToList(
 //							queryExecution.execSelect(),
 //							querySolution -> {
-//								final QuestionCategory questionCategory = new QuestionCategory();
-//								questionCategory.setRef(querySolution.getResource("ref"));
-//								questionCategory.setName(querySolution.getLiteral("name").getString());
+//								final Survey survey = new Survey();
+//								survey.setRef(querySolution.getResource("ref"));
+//								survey.setName(querySolution.getLiteral("name").getString());
 //
 //								Optional
 //									.ofNullable(querySolution.getLiteral("code"))
 //									.map(Literal::getString)
-//									.ifPresent(questionCategory::setCode);
+//									.ifPresent(survey::setCode);
 //
 //								Optional
 //									.ofNullable(querySolution.getLiteral("shortName"))
 //									.map(Literal::getString)
-//									.ifPresent(questionCategory::setShortName);
+//									.ifPresent(survey::setShortName);
 //
 //								Optional
 //									.ofNullable(querySolution.getLiteral("fileName"))
 //									.map(Literal::getString)
-//									.ifPresent(questionCategory::setFileName);
+//									.ifPresent(survey::setFileName);
 //
-//								return questionCategory;
+//								return survey;
 //							});
 //		}
 //
 //	}
 //
 //
-//	public QuestionPayLoad createQuestion(final QuestionCategory questionCategory, final Question question) {
+//	public QuestionPayLoad createQuestion(final Survey survey, final Question question) {
 //		final Model model = ModelFactory.createDefaultModel();
 //
 //
@@ -128,9 +128,9 @@ package com.junction2022.repositories.rdf;
 //						questionResource,
 //						Metadata.hasCode, Question::getCode);
 //
-//		// questionCategoryResource
+//		// surveyResource
 //		model
-//			.createResource(questionCategory.getUri())
+//			.createResource(survey.getUri())
 //			.addProperty(Metadata.hasQuestion, questionResource);
 //
 //

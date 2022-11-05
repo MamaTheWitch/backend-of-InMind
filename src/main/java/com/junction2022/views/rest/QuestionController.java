@@ -32,7 +32,7 @@
 //	public List<Map<String, String>> getUuids() throws IOException {
 //		return
 //			repository
-//				.getQuestionCategorySet()
+//				.getSurveySet()
 //				.getFlatQuestionMap()
 //				.values()
 //				.stream()
@@ -43,7 +43,7 @@
 //	@GetMapping("{questionUuid}")
 //	public Question getByUuid(@PathVariable final String questionUuid) throws IOException, ResourceNotFoundException {
 //		return repository
-//				.getQuestionCategorySet()
+//				.getSurveySet()
 //				.getQuestion(UUID.fromString(questionUuid))
 //				.orElseThrow(() -> new ResourceNotFoundException("Question card not found: " + questionUuid));
 //	}

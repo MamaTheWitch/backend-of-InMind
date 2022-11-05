@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.junction2022.common.exceptions.ResourceNotFoundException;
 import com.junction2022.models.Question;
-import com.junction2022.models.QuestionCategory;
+import com.junction2022.models.Survey;
 import com.junction2022.repositories.file.MetadataFileRepository;
 
 import java.util.List;
@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @RestController
-@RequestMapping("/api/category")
-public class QuestionCategoryController {
+@RequestMapping("/api/survey")
+public class SurveyController {
 
 
 	@Autowired
@@ -32,26 +32,26 @@ public class QuestionCategoryController {
 	@GetMapping()
 	public List<Map<String, String>> getAllUuids() {
 		return repository
-					.getQuestionCategorySet()
-					.getQuestionCategories()
+					.getSurveySet()
+					.getSurveys()
 					.stream()
-					.sorted(QuestionCategory.COMPARATOR_BY_CODE)
-					.map(QuestionCategory::asShortMap)
+					.sorted(Survey.COMPARATOR_BY_CODE)
+					.map(Survey::asShortMap)
 					.toList();
 	}
 
 	@GetMapping("full")
-	public List<QuestionCategory> getAll() {
+	public List<Survey> getAll() {
 		return repository
-					.getQuestionCategorySet()
-					.getQuestionCategories();
+					.getSurveySet()
+					.getSurveys();
 	}
 
 	@GetMapping("{categoryUuid}")
-	public QuestionCategory getByUuid(@PathVariable final String categoryUuid) throws ResourceNotFoundException {
+	public Survey getByUuid(@PathVariable final String categoryUuid) throws ResourceNotFoundException {
 		return repository
-					.getQuestionCategorySet()
-					.getQuestionCategory(UUID.fromString(categoryUuid))
+					.getSurveySet()
+					.getSurvey(UUID.fromString(categoryUuid))
 					.orElseThrow(() -> new ResourceNotFoundException("Question category not found: " + categoryUuid));
 	}
 

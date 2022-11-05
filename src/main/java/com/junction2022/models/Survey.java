@@ -15,13 +15,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class QuestionCategory extends FreshAirEntity {
+public class Survey extends FreshAirEntity {
 
-	public static final Comparator<QuestionCategory> COMPARATOR_BY_CODE =
-			Comparator.nullsFirst(Comparator.comparing(QuestionCategory::getCode));
+	public static final Comparator<Survey> COMPARATOR_BY_CODE =
+			Comparator.nullsFirst(Comparator.comparing(Survey::getCode));
 
-	public static final Comparator<QuestionCategory> COMPARATOR_BY_UUID =
-			Comparator.nullsFirst(Comparator.comparing(QuestionCategory::getUuid));
+	public static final Comparator<Survey> COMPARATOR_BY_UUID =
+			Comparator.nullsFirst(Comparator.comparing(Survey::getUuid));
 
 	private String code;
 	private String name;
@@ -47,7 +47,7 @@ public class QuestionCategory extends FreshAirEntity {
 
 	@Override
 	public OntClass getTypeRef() {
-		return FreshAirOntology.Metadata.QuestionCategory;
+		return FreshAirOntology.Metadata.Survey;
 	}
 
 }

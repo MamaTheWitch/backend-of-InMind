@@ -14,14 +14,14 @@ import lombok.Setter;
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class QuestionairResult {
+public class SurveyResult {
 	
-	private final QuestionCategory questionCategory;
+	private final Survey survey;
 	private List<QuestionAnswer> answers;
 
 //	public String getUri() {
-//		final String questionCategoryLocalId = questionCategory.getLocalId();
-//		return NameFormatter.getInstance().formatDoubleEntityUri(serviceLocalId, questionCategoryLocalId);
+//		final String surveyLocalId = survey.getLocalId();
+//		return NameFormatter.getInstance().formatDoubleEntityUri(serviceLocalId, surveyLocalId);
 //	}
 //
 //	public Resource getRef() {

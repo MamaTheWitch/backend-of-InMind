@@ -5,7 +5,7 @@ import java.util.UUID;
 import com.junction2022.common.exceptions.ResourceNotFoundException;
 import com.junction2022.models.Question;
 import com.junction2022.models.QuestionAnswer;
-import com.junction2022.models.QuestionCategory;
+import com.junction2022.models.Survey;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +17,7 @@ public class QuestionAnswerInput extends FreshAirEntityInput {
 	private UUID questionUuid;
 	private int value;
 
-	public QuestionAnswer toQuestionAnswer(final QuestionCategory category) {
+	public QuestionAnswer toQuestionAnswer(final Survey category) {
 		final Question question = category.getQuestionByUuid(questionUuid).orElse(null);
 		if (question == null) {
 			throw new ResourceNotFoundException("Unknown question UUID: " + questionUuid);

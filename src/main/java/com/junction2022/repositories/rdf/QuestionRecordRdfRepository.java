@@ -25,7 +25,7 @@
 //import com.junction2022.common.exceptions.ResourceNotFoundException;
 //import com.junction2022.models.Question;
 //import com.junction2022.models.QuestionAnswer;
-//import com.junction2022.models.QuestionairResult;
+//import com.junction2022.models.SurveyResult;
 //import com.junction2022.models.MentalService;
 //import com.junction2022.models.inputs.QuestionAnswerInput;
 //import com.junction2022.repositories.file.MetadataFileRepository;
@@ -49,7 +49,7 @@
 //	}
 //
 //	@PreAuthorize("hasRole('MANAGER')")
-//	public QuestionairResult addQuestionRecords(
+//	public SurveyResult addQuestionRecords(
 //			final MentalService service,
 //			final Question question,
 //			final List<QuestionAnswerInput> questionRecordInputs) {
@@ -57,7 +57,7 @@
 //
 //		final Resource serviceResource = service.getRef();
 //		final Resource questionResource = question.getRef();
-//		final QuestionairResult questionRecordGroup = new QuestionairResult(service, question);
+//		final SurveyResult questionRecordGroup = new SurveyResult(service, question);
 //		questionRecordGroup.setRecords(questionRecordInputs.stream().map(QuestionAnswerInput::toQuestionRecord).toList());
 //
 //		final Resource serviceQuestionResource =
@@ -92,7 +92,7 @@
 //		return questionRecordGroup;
 //	}
 //
-//	public List<QuestionairResult> getQuestionRecordGroups(final MentalService service) throws IOException {
+//	public List<SurveyResult> getQuestionRecordGroups(final MentalService service) throws IOException {
 //
 //		final var sparql =
 //				nameFormatter
@@ -113,7 +113,7 @@
 //							null,
 //							Map.of(
 //								"service", service.getRef(),
-//								"QuestionairResult", QuestionRecords.QuestionRecordGroup,
+//								"SurveyResult", QuestionRecords.QuestionRecordGroup,
 //								"boundToService", QuestionRecords.belongsToService,
 //								"boundToQuestion", QuestionRecords.belongsToQuestion)
 //					);
@@ -127,24 +127,24 @@
 //						final UUID questionUuid = nameFormatter.extractEntityUuid(questionResource.getURI());
 //						final Question question =
 //								metadataFileRepository
-//									.getQuestionCategorySet()
+//									.getSurveySet()
 //									.getQuestion(questionUuid)
 //									.orElse(null);
 //						if (question == null) {
 //							throw new ResourceNotFoundException("Unknown Question card: " + questionUuid);
 //						}
-//						return new QuestionairResult(service, question);
+//						return new SurveyResult(service, question);
 //					});
 //		}
 //
 //	}
 //
 //	public List<QuestionAnswer> getQuestionRecords(
-//			final QuestionairResult questionRecordGroup,
+//			final SurveyResult questionRecordGroup,
 //			final Optional<Instant> start,
 //			final Optional<Instant> end,
 //			final Optional<Integer> limit) throws IOException {
-//		final List<QuestionairResult> questionRecordGroups =
+//		final List<SurveyResult> questionRecordGroups =
 //				getQuestionRecords(
 //						Optional.of(questionRecordGroup.getService()),
 //						Optional.of(questionRecordGroup.getQuestion()),
@@ -154,12 +154,12 @@
 //		return questionRecordGroups
 //				.stream()
 //				.findFirst()
-//				.map(QuestionairResult::getRecords)
+//				.map(SurveyResult::getRecords)
 //				.orElse(Arrays.asList());
 //	}
 //
 //
-//	public List<QuestionairResult> getQuestionRecords(
+//	public List<SurveyResult> getQuestionRecords(
 //			final Optional<MentalService> service,
 //			final Optional<Question> question,
 //			final Optional<Instant> start,
@@ -198,7 +198,7 @@
 //		final String limitRestriction = limit.map(l -> "LIMIT " + l).orElse("");
 //
 //		params.put("QuestionAnswer", QuestionRecords.QuestionRecord);
-//		params.put("QuestionairResult", QuestionRecords.QuestionRecordGroup);
+//		params.put("SurveyResult", QuestionRecords.QuestionRecordGroup);
 //		params.put("boundToService", QuestionRecords.belongsToService);
 //		params.put("boundToQuestion", QuestionRecords.belongsToQuestion);
 //		params.put("hasRecord", QuestionRecords.hasRecord);
@@ -249,8 +249,8 @@
 //			final QueryExecution queryExecution = modelConnection.createQueryExecution(sparql.asQuery())) {
 //			final ResultSet resultSet = queryExecution.execSelect();
 //
-//			final List<QuestionairResult> questionRecordGroups = new ArrayList<>();
-//			QuestionairResult currentQuestionRecordGroup = null;
+//			final List<SurveyResult> questionRecordGroups = new ArrayList<>();
+//			SurveyResult currentQuestionRecordGroup = null;
 //
 //			while (resultSet.hasNext()) {
 //				final QuerySolution querySolution = resultSet.next();
@@ -270,7 +270,7 @@
 //				final UUID questionUuid1 = nameFormatter.extractEntityUuid(questionResource1.getURI());
 //				final Question question1 =
 //						metadataFileRepository
-//							.getQuestionCategorySet()
+//							.getSurveySet()
 //							.getQuestion(questionUuid1)
 //							.orElse(null);
 //				if (question1 == null) {
@@ -281,7 +281,7 @@
 //						|| !currentQuestionRecordGroup.getService().equals(service1)
 //						|| !currentQuestionRecordGroup.getQuestion().equals(question1))
 //				{
-//					currentQuestionRecordGroup = new QuestionairResult(service1, question1);
+//					currentQuestionRecordGroup = new SurveyResult(service1, question1);
 //					currentQuestionRecordGroup.setRecords(new ArrayList<>());
 //					questionRecordGroups.add(currentQuestionRecordGroup);
 //				}
@@ -298,7 +298,7 @@
 //
 //	}
 //
-//	public int getQuestionRecordGroupSize(final QuestionairResult questionRecordGroup) {
+//	public int getQuestionRecordGroupSize(final SurveyResult questionRecordGroup) {
 //
 //		final var sparql =
 //				nameFormatter
@@ -325,7 +325,7 @@
 //						null,
 //						Map.of(
 //								"QuestionAnswer", QuestionRecords.QuestionRecord,
-//								"QuestionairResult", QuestionRecords.QuestionRecordGroup,
+//								"SurveyResult", QuestionRecords.QuestionRecordGroup,
 //								"boundToService", QuestionRecords.belongsToService,
 //								"boundToQuestion", QuestionRecords.belongsToQuestion,
 //								"hasRecord", QuestionRecords.hasRecord,

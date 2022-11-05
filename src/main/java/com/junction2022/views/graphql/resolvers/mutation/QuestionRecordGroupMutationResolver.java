@@ -4,7 +4,7 @@
 //
 //import com.junction2022.FreshAirApplication;
 //import com.junction2022.models.Question;
-//import com.junction2022.models.QuestionairResult;
+//import com.junction2022.models.SurveyResult;
 //import com.junction2022.models.MentalService;
 //import com.junction2022.models.inputs.QuestionAnswerInput;
 //import com.junction2022.repositories.rdf.QuestionRecordRdfRepository;
@@ -18,7 +18,7 @@
 //	private final Question question;
 //
 //
-//	public QuestionairResult addQuestionRecords(final List<QuestionAnswerInput> questionRecords) {
+//	public SurveyResult addQuestionRecords(final List<QuestionAnswerInput> questionRecords) {
 //		final QuestionRecordRdfRepository questionRecordRdfRepository = FreshAirApplication.getBean(QuestionRecordRdfRepository.class);
 //		return questionRecordRdfRepository.addQuestionRecords(service, question, questionRecords);
 //	 }

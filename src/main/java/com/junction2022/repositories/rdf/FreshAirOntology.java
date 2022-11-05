@@ -17,7 +17,7 @@ public abstract class FreshAirOntology {
 		public static final OntModel ONT_MODEL = ModelFactory.createOntologyModel();
 
 		public static final OntClass Question = ONT_MODEL.createClass(NAMESPACE_URI + "Question");
-		public static final OntClass QuestionCategory = ONT_MODEL.createClass(NAMESPACE_URI + "QuestionCategory");
+		public static final OntClass Survey = ONT_MODEL.createClass(NAMESPACE_URI + "Survey");
 		public static final OntClass Service = ONT_MODEL.createClass(NAMESPACE_URI + "MentalService");
 
 		public static final DatatypeProperty hasCode = ONT_MODEL.createDatatypeProperty(NAMESPACE_URI + "hasCode");
@@ -48,7 +48,7 @@ public abstract class FreshAirOntology {
 		public static final ObjectProperty hasQuestion = ONT_MODEL.createObjectProperty(NAMESPACE_URI + "hasQuestion");
 		public static final ObjectProperty hasService = ONT_MODEL.createObjectProperty(NAMESPACE_URI + "hasService");
 
-		public static final OntClass QuestionRecordGroup = ONT_MODEL.createClass(NAMESPACE_URI + "QuestionairResult");
+		public static final OntClass QuestionRecordGroup = ONT_MODEL.createClass(NAMESPACE_URI + "SurveyResult");
 
 		public static final ObjectProperty belongsToQuestion = ONT_MODEL.createObjectProperty(NAMESPACE_URI + "belongsToQuestion");
 		public static final ObjectProperty belongsToService = ONT_MODEL.createObjectProperty(NAMESPACE_URI + "belongsToService");

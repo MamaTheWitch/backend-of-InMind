@@ -37,7 +37,7 @@
 //		}
 //
 //		return metadataFileRepository
-//					.getQuestionCategorySet()
+//					.getSurveySet()
 //					.getQuestion(questionUuid.getUuid())
 //					.map(question -> new QuestionRecordGroupMutationResolver(service, question));
 //	}

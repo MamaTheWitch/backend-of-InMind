@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.junction2022.models.QuestionCategory;
+import com.junction2022.models.Survey;
 import com.junction2022.repositories.file.MetadataFileRepository;
 import com.junction2022.views.graphql.scalars.UuidScalar;
 
@@ -18,21 +18,21 @@ public class MainQueryResolver implements GraphQLQueryResolver {
 	@Autowired
 	private MetadataFileRepository metadataFileRepository;
 
-	public List<QuestionCategory> getQuestionCategories() {
-		final List<QuestionCategory> categories =
+	public List<Survey> getSurveys() {
+		final List<Survey> categories =
 				metadataFileRepository
-					.getQuestionCategorySet()
-					.getQuestionCategories();
-		categories.sort(QuestionCategory.COMPARATOR_BY_CODE);
+					.getSurveySet()
+					.getSurveys();
+		categories.sort(Survey.COMPARATOR_BY_CODE);
 		return categories;
 
 	}
 
-	public Optional<QuestionCategory> getQuestionCategory(final UuidScalar uuid) {
+	public Optional<Survey> getSurvey(final UuidScalar uuid) {
 		return
 				metadataFileRepository
-					.getQuestionCategorySet()
-					.getQuestionCategories()
+					.getSurveySet()
+					.getSurveys()
 					.stream()
 					.filter(c -> c.getUuid().equals(uuid.getUuid()))
 					.findAny();

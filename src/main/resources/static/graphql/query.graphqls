@@ -1,12 +1,12 @@
 extend type Query {
-	questionCategories: [QuestionCategory!]!
-	questionCategory(uuid: Uuid!): QuestionCategory
+	surveys: [Survey!]!
+	survey(uuid: Uuid!): Survey
 	
 #	locations: [Location!]!
 #	location(uuid: Uuid!): Location
 }
 
-type QuestionCategory {
+type Survey {
 	uuid: Uuid!
 	code: ID!
 	ref: Uri!

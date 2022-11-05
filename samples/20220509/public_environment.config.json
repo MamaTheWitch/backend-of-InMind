@@ -1,0 +1,8 @@
+{
+	"baseurl": "http://130.188.4.131/freshAir-ws",
+	"user": "demo",
+	"password": "yqR2cBGZ25",
+	"categoryUuid": "fe141c64-6882-4ca2-adc7-75ac6b2733db",
+	"questionCardUuid": "b078c504-cc6d-4733-9436-6eff1da4925f",
+	"locationUuid": "f1ef2afb-1049-4340-90ff-da90239c8880"
+}

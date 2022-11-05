@@ -1,0 +1,1 @@
+mvn install && mkdir -p "target/dependency" && (cd target/dependency; jar -xf ../*.jar; cd ../..)

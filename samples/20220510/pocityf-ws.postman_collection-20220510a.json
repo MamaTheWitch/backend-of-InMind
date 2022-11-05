@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "673adbd1-4adc-4be0-a2aa-ed63c17bc799",
+		"name": "freshAir-ws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Specifications",
+			"item": [
+				{
+					"name": "OpenAPI 3 Specification (JSON)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api-docs",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OpenAPI 3 Specification (YAML)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api-docs.yaml",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api-docs.yaml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata files - KPI categories (YAML)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/resources/metadata/categories.yaml",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"resources",
+								"metadata",
+								"categories.yaml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metadata files - KPIs in a specific category (YAML)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/resources/metadata/question-cards-01-energy.yaml",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"resources",
+								"metadata",
+								"question-cards-01-energy.yaml"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Playground Tools (use in Web browsers)",
+			"item": [
+				{
+					"name": "Swagger - REST API UI (HTML)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/swagger-ui",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"swagger-ui"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GraphiQL - GraphQL UI (HTML)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/graphiql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphiql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REST API requests",
+			"item": [
+				{
+					"name": "Get all KPI categories (short version)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/category/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all KPI categories (full version)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/category/full",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"full"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a KPI categor's details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/category/{{categoryUuid}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"{{categoryUuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all KPIs of a category (short)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/category/{{categoryUuid}}/question",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"{{categoryUuid}}",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all KPIs of a category (full)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/category/{{categoryUuid}}/question/full",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"{{categoryUuid}}",
+								"question",
+								"full"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all KPIs (flat list)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/question/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a KPI's details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/question/{{questionCardUuid}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"question",
+								"{{questionCardUuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all locations (flat list)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/location",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all locations (tree structure)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/location/full",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"full"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a location's details (tree structure)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/location/{{locationUuid}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"{{locationUuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get related KPIs of a locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/location/{{locationUuid}}/question",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"{{locationUuid}}",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get KPI values of a location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/location/{{locationUuid}}/question/{{questionCardUuid}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"{{locationUuid}}",
+								"question",
+								"{{questionCardUuid}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REST API requests (manager only)",
+			"item": [
+				{
+					"name": "Add KPI values of a location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-06-24T07:05:08Z\",\r\n\t\t\t\"value\": 1.4160\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-03-31T18:13:00.202120211Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-03-14T17:22:13.202120213Z\",\r\n\t\t\t\"value\": 0.20212021202120215\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-04-18T06:37:32.202120210Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-06-24T07:05:04.202120210Z\",\r\n\t\t\t\"value\": 0.20212021202120216\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-03-31T17:13:51.202120219Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-10-04T03:54:35.202120212Z\",\r\n\t\t\t\"value\": 0.20212021202120214\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-05-20T23:19:32.202120210Z\",\r\n\t\t\t\"value\": 0.20212021202120215\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-08-14T11:04:31.202120214Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-06-13T22:44:03.202120214Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-08-25T09:14:32.202120213Z\",\r\n\t\t\t\"value\": 0.20212021202120216\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-01-08T04:28:35.202120216Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-10-02T05:05:51.202120218Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-08-02T23:55:00.202120215Z\",\r\n\t\t\t\"value\": 0.20212021202120214\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-12-19T14:08:50.202120212Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-04-12T03:22:28.202120210Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-08-09T10:58:46.202120218Z\",\r\n\t\t\t\"value\": 0.20212021202120217\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-11-27T10:44:45.202120214Z\",\r\n\t\t\t\"value\": 0.20212021202120218\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-08-13T04:57:20.202120213Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-02-13T23:22:00.202120218Z\",\r\n\t\t\t\"value\": 0.20212021202120216\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-03-05T21:54:07.202120218Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-09-26T15:35:01.202120217Z\",\r\n\t\t\t\"value\": 0.20212021202120217\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-05-10T07:16:21.202120216Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-03-10T02:32:03.202120214Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"timestamp\": \"2021-05-07T19:17:12.202120219Z\",\r\n\t\t\t\"value\": 0.2021202120212021\r\n\t\t}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/location/{{locationUuid}}/question/{{questionCardUuid}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"{{locationUuid}}",
+								"question",
+								"{{questionCardUuid}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL requests",
+			"item": [
+				{
+					"name": "questionCategories - get all KPI Categories (full version)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n\t# note: uncomment commented fields to get full data\r\n    questionCategories {\r\n        uuid\r\n        code\r\n        name\r\n\t\t# fileName\r\n\t\t# shortName\r\n\r\n        questionCards {\r\n            uuid\r\n            code\r\n            name        \r\n            description\r\n            formula\r\n\t\t\tmeasurementProcess\r\n\t\t\tmonitoringInterval\r\n\t\t\tisCore\r\n        }\r\n    }  \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questionCategories - get all KPI Categories (short version)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n\t# note: uncomment commented fields to get full data\r\n    questionCategories {\r\n        uuid\r\n        code\r\n        name\r\n\t\t# fileName\r\n\t\t# shortName\r\n\r\n        questionCards {\r\n            uuid\r\n            code\r\n            name        \r\n            # description\r\n            # formula\r\n\t\t\t# measurementProcess\r\n\t\t\t# monitoringInterval\r\n\t\t\t# isCore\r\n        }\r\n    }  \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questionCategory - get a KPI category's details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n\t# note: uncomment commented fields to get full dât\r\n    questionCategory(uuid: \"{{categoryUuid}}\") {\r\n      uuid\r\n      code\r\n      name\r\n\t\t\t# fileName\r\n\t\t\t# shortName\r\n      questionCards {\r\n        uuid\r\n        code\r\n        name        \r\n        description\r\n        formula\r\n\t\t\t\tmeasurementProcess\r\n\t\t\t\tmonitoringInterval\r\n\t\t\t\tisCore\r\n      }\r\n }\r\n  \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "locations - get the location hierarchy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n\tlocations {\r\n\t\tcode\r\n\t\tdescription\r\n\t\tgeoJsonData\r\n\t\tgeoJsonId\r\n\t\tname\r\n\t\ttype\r\n\t\tuuid\r\n\t\tchildren {\r\n\t\t\tcode\r\n\t\t\tdescription\r\n\t\t\tgeoJsonData\r\n\t\t\tgeoJsonId\r\n\t\t\tname\r\n\t\t\ttype\r\n\t\t\tuuid\r\n\t\t\tchildren {\r\n\t\t\t\tcode\r\n\t\t\t\tdescription\r\n\t\t\t\tgeoJsonData\r\n\t\t\t\tgeoJsonId\r\n\t\t\t\tname\r\n\t\t\t\ttype\r\n\t\t\t\tuuid\r\n\t\t\t\tchildren {\r\n\t\t\t\t\tcode\r\n\t\t\t\t\tdescription\r\n\t\t\t\t\tgeoJsonData\r\n\t\t\t\t\tgeoJsonId\r\n\t\t\t\t\tname\r\n\t\t\t\t\ttype\r\n\t\t\t\t\tuuid\r\n\t\t\t\t\tchildren {\r\n\t\t\t\t\t\tcode\r\n\t\t\t\t\t\tdescription\r\n\t\t\t\t\t\tgeoJsonData\r\n\t\t\t\t\t\tgeoJsonId\r\n\t\t\t\t\t\tname\r\n\t\t\t\t\t\ttype\r\n\t\t\t\t\t\tuuid\r\n\t\t\t\t\t\tchildren {\r\n\t\t\t\t\t\t\tcode\r\n\t\t\t\t\t\t\tdescription\r\n\t\t\t\t\t\t\tgeoJsonData\r\n\t\t\t\t\t\t\tgeoJsonId\r\n\t\t\t\t\t\t\tname\r\n\t\t\t\t\t\t\ttype\r\n\t\t\t\t\t\t\tuuid\r\n\t\t\t\t\t\t\tchildren {\r\n\t\t\t\t\t\t\t\tcode\r\n\t\t\t\t\t\t\t\tdescription\r\n\t\t\t\t\t\t\t\tgeoJsonData\r\n\t\t\t\t\t\t\t\tgeoJsonId\r\n\t\t\t\t\t\t\t\tname\r\n\t\t\t\t\t\t\t\ttype\r\n\t\t\t\t\t\t\t\tuuid\r\n\t\t\t\t\t\t\t\tchildren {\r\n\t\t\t\t\t\t\t\t\tcode\r\n\t\t\t\t\t\t\t\t\tdescription\r\n\t\t\t\t\t\t\t\t\tgeoJsonData\r\n\t\t\t\t\t\t\t\t\tgeoJsonId\r\n\t\t\t\t\t\t\t\t\tname\r\n\t\t\t\t\t\t\t\t\ttype\r\n\t\t\t\t\t\t\t\t\tuuid\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location/questionRecordGroups - get all KPI values (filtered by location)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  location(uuid: \"{{locationUuid}}\") {\r\n    name\r\n    questionRecordGroups {\r\n      questionCard {\r\n        uuid\r\n        name\r\n      }\r\n      questionRecords {\r\n        timestamp\r\n        value\r\n      }\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location/questionRecordGroups - get all KPI values (filtered by location, KPI)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    location(uuid: \"{{locationUuid}}\") {\r\n        # uuid\r\n        name\r\n        questionRecordGroup(questionCardUuid: \"{{questionCardUuid}}\") {\r\n        #  questionRecordGroups {\r\n            questionCard {\r\n                uuid\r\n                # name\r\n            }\r\n            questionRecords {\r\n                timestamp\r\n                value\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location/questionRecordGroups - get all KPI values (filtered by location, KPI, time range, number)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    location(uuid: \"{{locationUuid}}\") {\r\n        # uuid\r\n        name\r\n        questionRecordGroup(questionCardUuid: \"{{questionCardUuid}}\") {\r\n        #  questionRecordGroups {\r\n            questionCard {\r\n                uuid\r\n                # name\r\n            }\r\n            questionRecords(start: \"2021-02-01T00:00:00Z\", end: \"2022-01-01T00:00:00Z\", limit: 5) {\r\n                timestamp\r\n                value\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL requests (manager only)",
+			"item": [
+				{
+					"name": "addQuestionVallues",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n    questionRecordGroup(\r\n        locationUuid: \"{{locationUuid}}\",\r\n        questionCardUuid: \"{{questionCardUuid}}\") {\r\n            addQuestionRecords(values: [\r\n                {\r\n                    timestamp: \"2021-06-24T07:05:08Z\",\r\n                    value: 1.4160\r\n                },\r\n                {\r\n                    timestamp: \"2021-03-31T18:13:00.202120211Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-03-14T17:22:13.202120213Z\",\r\n                    value: 0.20212021202120215\r\n                },\r\n                {\r\n                    timestamp: \"2021-04-18T06:37:32.202120210Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-06-24T07:05:04.202120210Z\",\r\n                    value: 0.20212021202120216\r\n                },\r\n                {\r\n                    timestamp: \"2021-03-31T17:13:51.202120219Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-10-04T03:54:35.202120212Z\",\r\n                    value: 0.20212021202120214\r\n                },\r\n                {\r\n                    timestamp: \"2021-05-20T23:19:32.202120210Z\",\r\n                    value: 0.20212021202120215\r\n                },\r\n                {\r\n                    timestamp: \"2021-08-14T11:04:31.202120214Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-06-13T22:44:03.202120214Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-08-25T09:14:32.202120213Z\",\r\n                    value: 0.20212021202120216\r\n                },\r\n                {\r\n                    timestamp: \"2021-01-08T04:28:35.202120216Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-10-02T05:05:51.202120218Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-08-02T23:55:00.202120215Z\",\r\n                    value: 0.20212021202120214\r\n                },\r\n                {\r\n                    timestamp: \"2021-12-19T14:08:50.202120212Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-04-12T03:22:28.202120210Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-08-09T10:58:46.202120218Z\",\r\n                    value: 0.20212021202120217\r\n                },\r\n                {\r\n                    timestamp: \"2021-11-27T10:44:45.202120214Z\",\r\n                    value: 0.20212021202120218\r\n                },\r\n                {\r\n                    timestamp: \"2021-08-13T04:57:20.202120213Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-02-13T23:22:00.202120218Z\",\r\n                    value: 0.20212021202120216\r\n                },\r\n                {\r\n                    timestamp: \"2021-03-05T21:54:07.202120218Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-09-26T15:35:01.202120217Z\",\r\n                    value: 0.20212021202120217\r\n                },\r\n                {\r\n                    timestamp: \"2021-05-10T07:16:21.202120216Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-03-10T02:32:03.202120214Z\",\r\n                    value: 0.2021202120212021\r\n                },\r\n                {\r\n                    timestamp: \"2021-05-07T19:17:12.202120219Z\",\r\n                    value: 0.2021202120212021\r\n                }\r\n            ]) {\r\n            size\r\n            questionRecords {\r\n                timestamp\r\n                value        \r\n            }\r\n        }\r\n    }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/graphql",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL requests (admin only)",
+			"item": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://localhost:8080/freshAir-ws"
+		},
+		{
+			"key": "user",
+			"value": "demo"
+		},
+		{
+			"key": "password",
+			"value": "yqR2cBGZ25"
+		},
+		{
+			"key": "categoryUuid",
+			"value": "fe141c64-6882-4ca2-adc7-75ac6b2733db",
+			"type": "string"
+		},
+		{
+			"key": "questionCardUuid",
+			"value": "b078c504-cc6d-4733-9436-6eff1da4925f",
+			"type": "string"
+		},
+		{
+			"key": "locationUuid",
+			"value": "f1ef2afb-1049-4340-90ff-da90239c8880",
+			"type": "string"
+		}
+	]
+}

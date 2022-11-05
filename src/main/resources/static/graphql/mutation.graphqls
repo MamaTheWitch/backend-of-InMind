@@ -1,0 +1,22 @@
+extend type Mutation {
+
+	#	importFromFileToRdf(includeQuestionCategories: Boolean=true): Metadata!
+	questionRecordGroup(locationUuid: Uuid!, questionCardUuid: Uuid!): QuestionRecordGroupMutation
+	
+#	test: TestMutation
+}
+
+type QuestionRecordGroupMutation {
+	addQuestionRecords(values: [QuestionRecordInput!]!): QuestionRecordGroup! #### @auth(role : "manager")
+}
+
+input QuestionRecordInput {
+	timestamp: DateTime
+	value: Float
+}
+
+
+type TestMutation {
+	loadLocations(filePath: String!): LocationSet	
+}
+

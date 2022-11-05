@@ -1,0 +1,1377 @@
+_type: export
+__export_format: 4
+__export_date: 2022-05-09T11:47:41.302Z
+__export_source: insomnia.desktop.app:v2022.3.0
+resources:
+  - _id: req_d81591b4b3954cb89396ce6786df2aa2
+    parentId: null
+    modified: 1652085475438
+    created: 1650660182143
+    url: "{{baseurl}}/api-docs"
+    name: OpenAPI 3 Specification (JSON)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1634293000085
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_79cbba14e51a47ebac092028ad643e99
+    parentId: null
+    modified: 1652085602990
+    created: 1652040733599
+    name: Specifications
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1652040733599
+    _type: request_group
+  - _id: fld_6c73bc9421794522ad0b703cf5ea01c3
+    parentId: null
+    modified: 1616545249091
+    created: 1616545249091
+    name: POCITYF
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1616545249091
+    _type: request_group
+  - _id: wrk_a130b6bb14d1421dbbefbda07b4918e6
+    parentId: null
+    modified: 1648733836962
+    created: 1580928262254
+    name: Insomnia
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_4788f6ace3e947978009833d620ad13b
+    parentId: null
+    modified: 1652085464385
+    created: 1651863715028
+    url: "{{baseurl}}/api-docs.yaml"
+    name: OpenAPI 3 Specification (YAML)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ebcd03e01f6344619a02d71a9efcc9f8
+        name: Accept
+        value: application/yaml
+        description: ""
+        disabled: true
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1634293000035
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e8e1e151293f46678095e655bae4cf63
+    parentId: null
+    modified: 1652095578240
+    created: 1651864108757
+    url: "{{baseurl}}/resources/metadata/categories.yaml"
+    name: Metadata files - KPI categories (YAML)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ebcd03e01f6344619a02d71a9efcc9f8
+        name: Accept
+        value: application/yaml
+        description: ""
+        disabled: true
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1634292999985
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4d17bbb7582e426a8170bb1cad3a7d9e
+    parentId: null
+    modified: 1652095590166
+    created: 1651864173203
+    url: "{{baseurl}}/resources/metadata/question-cards-01-energy.yaml"
+    name: Metadata files - KPIs in a specific category (YAML)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ebcd03e01f6344619a02d71a9efcc9f8
+        name: Accept
+        value: application/yaml
+        description: ""
+        disabled: true
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1634292999935
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d7cae92b21944ef0a763f06023b8f86b
+    parentId: null
+    modified: 1652085580075
+    created: 1652040686254
+    url: "{{baseurl}}/graphql/schema"
+    name: GraphQL Schema (GraphQL SDL)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1634292999885
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_437a0328811540d68dbf8a794d2a5078
+    parentId: null
+    modified: 1652089215906
+    created: 1651864227189
+    url: ""
+    name: Swagger - REST API UI (HTML)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ebcd03e01f6344619a02d71a9efcc9f8
+        name: Accept
+        value: application/yaml
+        description: ""
+        disabled: true
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1625419133303.537
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6192bb38debe48cb91d68f28b255a271
+    parentId: null
+    modified: 1652089228419
+    created: 1652040758286
+    name: Playground Tools (use in Web browsers)
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1634293000068.6914
+    _type: request_group
+  - _id: req_cf540c93c85d4ab08c043d90e301ed9b
+    parentId: null
+    modified: 1652089217464
+    created: 1652040462274
+    url: "{{baseurl}}/graphiql"
+    name: GraphiQL - GraphQL UI (HTML)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1625419133253.537
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c19d4691e022473093d19ae36914a97c
+    parentId: null
+    modified: 1652095596019
+    created: 1617711133594
+    url: "{{ baseurl }}/api/category/"
+    name: Get all KPI categories (short version)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1613793960432
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e8a9da7038354f629b9fc06df6578461
+    parentId: null
+    modified: 1652089681992
+    created: 1652056129115
+    name: REST API requests
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629856066683.331
+    _type: request_group
+  - _id: req_45afc1cdcef242dba9f3087a943e0a92
+    parentId: null
+    modified: 1652095597734
+    created: 1652056207148
+    url: "{{ baseurl }}/api/category/full"
+    name: Get all KPI categories (full version)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1613450047170.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3feafcced0dc4e6c80931ee23e8fc4cb
+    parentId: null
+    modified: 1652095608089
+    created: 1652056268513
+    url: "{{ baseurl }}/api/category/{{categoryUuid}}"
+    name: Get a KPI categor's details
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612934177279.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e567ba700fee46ff971e48baa2af4503
+    parentId: null
+    modified: 1652095649269
+    created: 1652056396757
+    url: "{{ baseurl }}/api/category/{{categoryUuid}}/question"
+    name: Get all KPIs of a category (short)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612934177254.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4eac03f3d4c44d93a63758d3fca54b9e
+    parentId: null
+    modified: 1652095670557
+    created: 1652056830522
+    url: "{{ baseurl }}/api/category/{{categoryUuid}}/question/full"
+    name: Get all KPIs of a category (full)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612934177229.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0a92fe35f59542b0acbd76a78d8cd895
+    parentId: null
+    modified: 1652095686608
+    created: 1652056943629
+    url: "{{ baseurl }}/api/question/"
+    name: Get all KPIs (flat list)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612504285677.7812
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8105cc9ecfbe49fbb8635e399e7679da
+    parentId: null
+    modified: 1652095732421
+    created: 1652056970107
+    url: "{{ baseurl }}/api/question/{{ questionCardUuid }}"
+    name: Get a KPI's details
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612289339902.0781
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7c55dc9f2734448bb1e3c94a37587765
+    parentId: null
+    modified: 1652095736312
+    created: 1652057016889
+    url: "{{ baseurl }}/api/location"
+    name: Get all locations (flat list)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612289339877.0781
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a9c4cb923d3949dfa8a2dffcad87c239
+    parentId: null
+    modified: 1652095740186
+    created: 1652057372360
+    url: "{{ baseurl }}/api/location/full"
+    name: Get all locations (tree structure)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612181867001.7266
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9328a42aae4a4aa487511b5076a2ff66
+    parentId: null
+    modified: 1652095761422
+    created: 1652057421174
+    url: "{{ baseurl }}/api/location/{{locationUuid}}"
+    name: Get a location's details (tree structure)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1612181866951.7266
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_faaa8969600e413087c954508a5e999f
+    parentId: null
+    modified: 1652096408092
+    created: 1652093579731
+    url: "{{ baseurl }}/api/location/{{locationUuid}}/question"
+    name: Get related KPIs of a locations
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1611612260647.3633
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e5102fef0b7f4209a7d20bb8fbc2832c
+    parentId: null
+    modified: 1652096418641
+    created: 1652096310595
+    url: "{{ baseurl }}/api/location/{{locationUuid}}/question/{{questionCardUuid}}"
+    name: Get KPI values of a location
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1611327457495.1816
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_47889ee4dd1344efa9234ec8a3e732cb
+    parentId: null
+    modified: 1652096625068
+    created: 1652096375767
+    url: "{{ baseurl }}/api/location/{{locationUuid}}/question/{{questionCardUuid}}"
+    name: Add KPI values of a location
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        [
+        		{
+        			"timestamp": "2021-06-24T07:05:08Z",
+        			"value": 1.4160
+        		},
+        		{
+        			"timestamp": "2021-03-31T18:13:00.202120211Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-03-14T17:22:13.202120213Z",
+        			"value": 0.20212021202120215
+        		},
+        		{
+        			"timestamp": "2021-04-18T06:37:32.202120210Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-06-24T07:05:04.202120210Z",
+        			"value": 0.20212021202120216
+        		},
+        		{
+        			"timestamp": "2021-03-31T17:13:51.202120219Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-10-04T03:54:35.202120212Z",
+        			"value": 0.20212021202120214
+        		},
+        		{
+        			"timestamp": "2021-05-20T23:19:32.202120210Z",
+        			"value": 0.20212021202120215
+        		},
+        		{
+        			"timestamp": "2021-08-14T11:04:31.202120214Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-06-13T22:44:03.202120214Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-08-25T09:14:32.202120213Z",
+        			"value": 0.20212021202120216
+        		},
+        		{
+        			"timestamp": "2021-01-08T04:28:35.202120216Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-10-02T05:05:51.202120218Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-08-02T23:55:00.202120215Z",
+        			"value": 0.20212021202120214
+        		},
+        		{
+        			"timestamp": "2021-12-19T14:08:50.202120212Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-04-12T03:22:28.202120210Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-08-09T10:58:46.202120218Z",
+        			"value": 0.20212021202120217
+        		},
+        		{
+        			"timestamp": "2021-11-27T10:44:45.202120214Z",
+        			"value": 0.20212021202120218
+        		},
+        		{
+        			"timestamp": "2021-08-13T04:57:20.202120213Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-02-13T23:22:00.202120218Z",
+        			"value": 0.20212021202120216
+        		},
+        		{
+        			"timestamp": "2021-03-05T21:54:07.202120218Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-09-26T15:35:01.202120217Z",
+        			"value": 0.20212021202120217
+        		},
+        		{
+        			"timestamp": "2021-05-10T07:16:21.202120216Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-03-10T02:32:03.202120214Z",
+        			"value": 0.2021202120212021
+        		},
+        		{
+        			"timestamp": "2021-05-07T19:17:12.202120219Z",
+        			"value": 0.2021202120212021
+        		}
+        ]
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5e256b018bdc48819b181818563e7e2e
+    authentication:
+      type: basic
+      useISO88591: true
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1611220656313.1135
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_fcbbf34541c948f2a8b6e144d8c34914
+    parentId: null
+    modified: 1652096619086
+    created: 1652096613904
+    name: REST API requests (manager only)
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1611256256707.1362
+    _type: request_group
+  - _id: req_6e8dac13171f4e35a908b3d7037d83b6
+    parentId: null
+    modified: 1652095939757
+    created: 1652038128536
+    url: "{{baseurl}}/graphql"
+    name: questionCategories - get all KPI Categories (full version)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n\t# note: uncomment commented fields to get full
+        data\n    questionCategories {\n      uuid\n      code\n      name\n\t\t\t#
+        fileName\n\t\t\t# shortName\n      questionCards
+        {\n        uuid\n        code\n        name        \n        description\n        formula\n\t\t\t\tmeasurementProcess\n\t\t\t\tmonitoringInterval\n\t\t\t\tisCore\n      }\n
+        }\n  \n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266477.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e7787d456e694d4b822253d88e44fe8f
+    parentId: null
+    modified: 1652040810734
+    created: 1652040797219
+    name: GraphQL requests
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1625419133297.9707
+    _type: request_group
+  - _id: req_5f0176b107204238a377a6cf7ad3c20f
+    parentId: null
+    modified: 1652095943510
+    created: 1652038139417
+    url: "{{baseurl}}/graphql"
+    name: questionCategories - get all KPI Categories (short version)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n\t# note: uncomment commented fields to get full
+        data\n    questionCategories {\n      uuid\n      code\n      name\n\t\t\t#
+        fileName\n\t\t\t# shortName\n      questionCards
+        {\n        uuid\n        code\n        name        \n#         description\n#         formula\n#
+        \t\t\t\tmeasurementProcess\n# \t\t\t\tmonitoringInterval\n#
+        \t\t\t\tisCore\n      }\n }\n  \n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266427.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_15f663874ef949a78fd888d046f84b5f
+    parentId: null
+    modified: 1652095990884
+    created: 1652038017666
+    url: "{{baseurl}}/graphql"
+    name: questionCategory - get a KPI category's details
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n\t# note: uncomment commented fields to get full
+        dât\n    questionCategory(uuid: \"{{categoryUuid}}\")
+        {\n      uuid\n      code\n      name\n\t\t\t# fileName\n\t\t\t#
+        shortName\n      questionCards
+        {\n        uuid\n        code\n        name        \n        description\n        formula\n\t\t\t\tmeasurementProcess\n\t\t\t\tmonitoringInterval\n\t\t\t\tisCore\n      }\n
+        }\n  \n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266377.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_722974db296c404481f344c1c6b3bc6f
+    parentId: null
+    modified: 1652096025351
+    created: 1652038224863
+    url: "{{baseurl}}/graphql"
+    name: locations - get the location hierarchy
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n\tlocations
+        {\n\t\tcode\n\t\tdescription\n\t\tgeoJsonData\n\t\tgeoJsonId\n\t\tname\n\t\ttype\n\t\tuuid\n\t\tchildren
+        {\n\t\t\tcode\n\t\t\tdescription\n\t\t\tgeoJsonData\n\t\t\tgeoJsonId\n\t\t\tname\n\t\t\ttype\n\t\t\tuuid\n\t\t\tchildren
+        {\n\t\t\t\tcode\n\t\t\t\tdescription\n\t\t\t\tgeoJsonData\n\t\t\t\tgeoJsonId\n\t\t\t\tname\n\t\t\t\ttype\n\t\t\t\tuuid\n\t\t\t\tchildren
+        {\n\t\t\t\t\tcode\n\t\t\t\t\tdescription\n\t\t\t\t\tgeoJsonData\n\t\t\t\t\tgeoJsonId\n\t\t\t\t\tname\n\t\t\t\t\ttype\n\t\t\t\t\tuuid\n\t\t\t\t\tchildren
+        {\n\t\t\t\t\t\tcode\n\t\t\t\t\t\tdescription\n\t\t\t\t\t\tgeoJsonData\n\t\t\t\t\t\tgeoJsonId\n\t\t\t\t\t\tname\n\t\t\t\t\t\ttype\n\t\t\t\t\t\tuuid\n\t\t\t\t\t\tchildren
+        {\n\t\t\t\t\t\t\tcode\n\t\t\t\t\t\t\tdescription\n\t\t\t\t\t\t\tgeoJsonData\n\t\t\t\t\t\t\tgeoJsonId\n\t\t\t\t\t\t\tname\n\t\t\t\t\t\t\ttype\n\t\t\t\t\t\t\tuuid\n\t\t\t\t\t\t\tchildren
+        {\n\t\t\t\t\t\t\t\tcode\n\t\t\t\t\t\t\t\tdescription\n\t\t\t\t\t\t\t\tgeoJsonData\n\t\t\t\t\t\t\t\tgeoJsonId\n\t\t\t\t\t\t\t\tname\n\t\t\t\t\t\t\t\ttype\n\t\t\t\t\t\t\t\tuuid\n\t\t\t\t\t\t\t\tchildren
+        {\n\t\t\t\t\t\t\t\t\tcode\n\t\t\t\t\t\t\t\t\tdescription\n\t\t\t\t\t\t\t\t\tgeoJsonData\n\t\t\t\t\t\t\t\t\tgeoJsonId\n\t\t\t\t\t\t\t\t\tname\n\t\t\t\t\t\t\t\t\ttype\n\t\t\t\t\t\t\t\t\tuuid\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266327.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_07f771e37c5a4d95b038bae55499df1f
+    parentId: null
+    modified: 1652096064156
+    created: 1631225296707
+    url: "{{baseurl}}/graphql"
+    name: location/questionRecordGroups - get all KPI values (filtered by location)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n  location(uuid: \"{{locationUuid}}\")
+        {\n    name\n    questionRecordGroups {\n      questionCard
+        {\n        uuid\n        name\n      }\n      questionRecords
+        {\n        timestamp\n        value\n      }\n    }\n  }\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266324.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6b5f29cedf3b42e1bd681f95c51d0afb
+    parentId: null
+    modified: 1652096096548
+    created: 1652094741665
+    url: "{{baseurl}}/graphql"
+    name: location/questionRecordGroups - get all KPI values (filtered by location, KPI)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n  location(uuid: \"{{locationUuid}}\")
+        {\n#     uuid\n    name\n    questionRecordGroup(questionCardUuid:
+        \"{{questionCardUuid}}\") {\n#     questionRecordGroups {\n      questionCard
+        {\n        uuid\n#         name\n      }\n      questionRecords
+        {\n        timestamp\n        value\n      }\n    }\n  }\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266322.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7be29f18ab1a45f4802f6d4f7c8cbb34
+    parentId: null
+    modified: 1652096122863
+    created: 1652094962713
+    url: "{{baseurl}}/graphql"
+    name: location/questionRecordGroups - get all KPI values (filtered by location, KPI,
+      time range, number)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query {\n  location(uuid: \"{{locationUuid}}\")
+        {\n#     uuid\n    name\n    questionRecordGroup(questionCardUuid:
+        \"{{questionCardUuid}}\") {\n#     questionRecordGroups {\n      questionCard
+        {\n        uuid\n#         name\n      }\n      questionRecords(start:
+        \"2021-02-01T00:00:00Z\", end: \"2022-01-01T00:00:00Z\", limit: 5)
+        {\n        timestamp\n        value\n      }\n    }\n  }\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1616545266321.7812
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7d23fbc56cad4b93970f04af14d83f29
+    parentId: null
+    modified: 1652096440723
+    created: 1630533080699
+    url: "{{baseurl}}/graphql"
+    name: GraphQL - addQuestionVallues
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  questionRecordGroup(\n    locationUuid:
+        \"{{locationUuid}}\",\n    questionCardUuid: \"{{questionCardUuid}}\")
+        {\n      __typename\n      addQuestionRecords(values:
+        [\n        {\n          timestamp:
+        \"2021-06-24T07:05:08Z\",\n          value:
+        1.4160\n        },\n        {\n          timestamp:
+        \"2021-03-31T18:13:00.202120211Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-03-14T17:22:13.202120213Z\",\n          value:
+        0.20212021202120215\n        },\n        {\n          timestamp:
+        \"2021-04-18T06:37:32.202120210Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-06-24T07:05:04.202120210Z\",\n          value:
+        0.20212021202120216\n        },\n        {\n          timestamp:
+        \"2021-03-31T17:13:51.202120219Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-10-04T03:54:35.202120212Z\",\n          value:
+        0.20212021202120214\n        },\n        {\n          timestamp:
+        \"2021-05-20T23:19:32.202120210Z\",\n          value:
+        0.20212021202120215\n        },\n        {\n          timestamp:
+        \"2021-08-14T11:04:31.202120214Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-06-13T22:44:03.202120214Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-08-25T09:14:32.202120213Z\",\n          value:
+        0.20212021202120216\n        },\n        {\n          timestamp:
+        \"2021-01-08T04:28:35.202120216Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-10-02T05:05:51.202120218Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-08-02T23:55:00.202120215Z\",\n          value:
+        0.20212021202120214\n        },\n        {\n          timestamp:
+        \"2021-12-19T14:08:50.202120212Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-04-12T03:22:28.202120210Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-08-09T10:58:46.202120218Z\",\n          value:
+        0.20212021202120217\n        },\n        {\n          timestamp:
+        \"2021-11-27T10:44:45.202120214Z\",\n          value:
+        0.20212021202120218\n        },\n        {\n          timestamp:
+        \"2021-08-13T04:57:20.202120213Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-02-13T23:22:00.202120218Z\",\n          value:
+        0.20212021202120216\n        },\n        {\n          timestamp:
+        \"2021-03-05T21:54:07.202120218Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-09-26T15:35:01.202120217Z\",\n          value:
+        0.20212021202120217\n        },\n        {\n          timestamp:
+        \"2021-05-10T07:16:21.202120216Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-03-10T02:32:03.202120214Z\",\n          value:
+        0.2021202120212021\n        },\n        {\n          timestamp:
+        \"2021-05-07T19:17:12.202120219Z\",\n          value:
+        0.2021202120212021\n        }\n      ]) {\n      size\n      questionRecords
+        {\n        timestamp\n        value        \n      }\n    }\n  }\n}\n"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1614309830323.6875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f364531c70d24411bb0e2aa8e3c7d8bb
+    parentId: null
+    modified: 1652054999007
+    created: 1652054991585
+    name: GraphQL requests (manager only)
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1616545266321
+    _type: request_group
+  - _id: req_53cb28dc56a047598007762153ccfb9e
+    parentId: null
+    modified: 1652096197708
+    created: 1630924120644
+    url: "{{baseurl}}/graphql"
+    name: normalizeEsdlModel
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  esdl {\n    normalizeEsdlModel(\n      filePath:
+        \"C:/Workspace/POCITYF/freshAir-ws/src/main/resources/static/metadata/Portugal-normalized.esdl\",\n      newFilePath:
+        \"c:/Users/nvnam/eclipse-workspace-2/esdl-test/Portugal-normalized.esdl\")
+        {\n      id\n      name\n      instance
+        {\n        id\n        name\n        area
+        {\n          id\n          name\n          scope\n          \n          area
+        {\n            id\n            name\n            scope\n            area
+        {\n              id\n              name\n              scope\n              area
+        {\n                id\n                name\n                scope\n                asset
+        {\n                  id\n                  name\n                }            \n              }\n              asset
+        {\n                id\n                name\n              }            \n            }\n            asset
+        {\n              id\n              name\n             }            \n          }\n          asset
+        {\n            id\n            name\n           }\n        }\n      }\n    }\n  }\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{ password }}"
+    metaSortKey: -1620143911335.4932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e878947dffc54534aa2115aedb9cea19
+    parentId: null
+    modified: 1652045402402
+    created: 1652040998266
+    name: GraphQL requests (admin only)
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1616545266314.75
+    _type: request_group
+  - _id: req_c2829c3a3be14e43804f8d6f3a088f6b
+    parentId: null
+    modified: 1652096201538
+    created: 1632435198535
+    url: "{{baseurl}}/graphql"
+    name: "loadEsdlModelAsLocationSet (ignoreUnknownLocationTypes: false)"
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  esdl
+        {\n    loadEsdlModelAsLocationSet(\n      filePath:
+        \"C:/Workspace/POCITYF/freshAir-ws/src/main/resources/static/metadata/Portugal-normalized.esdl\",\n      ignoreUnknownLocationTypes:
+        false,\n      defaultCountryName: \"FI\")\n    {\n      rootLocations
+        {\n        uuid\n        name\n        type\n        \n        children
+        {\n          uuid\n          name\n          type\n\n          children
+        {\n            uuid\n            name\n            type\n\n            children
+        {\n              uuid\n              name\n              type\n\n              children
+        {\n                uuid\n                name\n                type\n\n                children
+        {\n                  uuid\n                  name\n                  type\n                }\n              }\n            }\n          }\n        }\n      }\n    }      \n  }\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{ password }}"
+    metaSortKey: -1620143911285.4932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_05f5875b30544d3ca4d590b301e2ab3f
+    parentId: null
+    modified: 1652096204829
+    created: 1635846795847
+    url: "{{baseurl}}/graphql"
+    name: "loadEsdlModelAsLocationSet (ignoreUnknownLocationTypes: true)"
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  esdl
+        {\n    loadEsdlModelAsLocationSet(\n      filePath:
+        \"C:/Workspace/POCITYF/freshAir-ws/src/main/resources/static/metadata/Portugal-normalized.esdl\",\n      ignoreUnknownLocationTypes:
+        true,\n      defaultCountryName: \"FI\")\n    {\n      rootLocations
+        {\n        uuid\n        name\n        type\n        \n        children
+        {\n          uuid\n          name\n          type\n\n          children
+        {\n            uuid\n            name\n            type\n\n            children
+        {\n              uuid\n              name\n              type\n\n              children
+        {\n                uuid\n                name\n                type\n\n                children
+        {\n                  uuid\n                  name\n                  type\n                }\n              }\n            }\n          }\n        }\n      }\n    }      \n  }\n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: "{{user}}"
+      password: "{{password}}"
+    metaSortKey: -1620143911235.4932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_43f00c8ee5fb4cdbb253b436f45f9541
+    parentId: null
+    modified: 1652096207034
+    created: 1625114177434
+    url: http://localhost:8080/freshAir-ws/graphql
+    name: GraphQL_Metadata_import
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  metadata
+        {\n    importFromFileToRdf(includeQuestionCategories: true)
+        {\n      questionCategories
+        {\n        uuid\n        ref\n        name\n      }\n#       locations
+        {\n#         uuid\n#         name\n#         children
+        {\n#           uuid\n#           name\n#           children
+        {\n#             uuid\n#             name\n#             children
+        {\n#               uuid\n#               name\n#             }\n#           }\n#         }\n#       }\n    }    \n  }  \n}"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75c2547395de4cd7a5147c8bd4bcda2f
+    authentication: {}
+    metaSortKey: -1620143911185.4932
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_58f02be57123bc72deda5d525ae9eb5205f5a9e3
+    parentId: null
+    modified: 1652095535270
+    created: 1580928262306
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1580928262306
+    _type: environment
+  - _id: jar_58f02be57123bc72deda5d525ae9eb5205f5a9e3
+    parentId: null
+    modified: 1652094898496
+    created: 1580928262317
+    name: Default Jar
+    cookies:
+      - key: JSESSIONID
+        value: 25D03C8647CEE9D989B1CB66CB5D0FDA
+        domain: localhost
+        path: /freshAir-ws
+        httpOnly: true
+        hostOnly: true
+        creation: 2022-04-08T15:43:03.373Z
+        lastAccessed: 2022-05-09T11:14:58.496Z
+        id: "5058667077792103"
+      - key: JSESSIONID
+        value: 8D6383FD39664FD6FE2FB046D0E8C457
+        domain: localhost
+        path: /demo
+        httpOnly: true
+        hostOnly: true
+        creation: 2022-04-22T20:59:24.734Z
+        lastAccessed: 2022-05-03T22:54:10.899Z
+        id: "9037664976287054"
+      - key: JSESSIONID
+        value: DF699640C6832CF634B4C7CEF123890F
+        domain: 130.188.4.131
+        path: /freshAir-ws
+        httpOnly: true
+        hostOnly: true
+        creation: 2022-05-09T08:15:26.564Z
+        lastAccessed: 2022-05-09T09:40:40.036Z
+        id: "15993467633245073"
+    _type: cookie_jar
+  - _id: spc_176c0bf6536c448baf3247aa9bc8a407
+    parentId: null
+    modified: 1592335022977
+    created: 1592335022977
+    fileName: Insomnia
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_f94ddee73de64fc786047addb9fe003e
+    parentId: null
+    modified: 1651863484696
+    created: 1580928375725
+    name: drumbeat
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1580928375725
+    _type: environment
+  - _id: env_fdd2c12ec9df49d3addb68d5b040be99
+    parentId: null
+    modified: 1651863528730
+    created: 1583284237537
+    name: BimLinker @ http://40.127.98.64:8080/bimlinker
+    data:
+      bimLinker_baseUrl: http://40.127.98.64:8080/bimlinker
+      bimLinker_header_accept: text/html;q=1, text/turtle;q=0.1, application/ld+json;q=0.2
+    dataPropertyOrder:
+      "&":
+        - bimLinker_baseUrl
+        - bimLinker_header_accept
+    color: null
+    isPrivate: false
+    metaSortKey: 1583284237537
+    _type: environment
+  - _id: env_8fd9cd803ead47aca138a39e955c7dce
+    parentId: null
+    modified: 1651863485755
+    created: 1591627694934
+    name: BimLinker @ http://localhost:8082/bimlinker
+    data:
+      bimLinker_baseUrl: http://localhost:8082/bimlinker
+      bimLinker_header_accept: text/html;q=1, text/turtle;q=0.1, application/ld+json;q=0.2
+    dataPropertyOrder:
+      "&":
+        - bimLinker_baseUrl
+        - bimLinker_header_accept
+    color: null
+    isPrivate: false
+    metaSortKey: 1591627694935
+    _type: environment
+  - _id: env_eef0f2df7b814a03ad9eebd51028df33
+    parentId: null
+    modified: 1652095537237
+    created: 1651863494262
+    name: FreshAir @ localhost:8080
+    data:
+      baseurl: http://localhost:8080/freshAir-ws
+      user: demo
+      password: yqR2cBGZ25
+      categoryUuid: fe141c64-6882-4ca2-adc7-75ac6b2733db
+      questionCardUuid: b078c504-cc6d-4733-9436-6eff1da4925f
+      locationUuid: f1ef2afb-1049-4340-90ff-da90239c8880
+    dataPropertyOrder:
+      "&":
+        - baseurl
+        - user
+        - password
+        - categoryUuid
+        - questionCardUuid
+        - locationUuid
+    color: null
+    isPrivate: false
+    metaSortKey: 1651863494262
+    _type: environment
+  - _id: env_9e77c59f11e245dba0764e36594e1ad7
+    parentId: null
+    modified: 1652095546765
+    created: 1652084069002
+    name: FreshAir @ 130.188.4.131
+    data:
+      baseurl: http://130.188.4.131/freshAir-ws
+      user: demo
+      password: yqR2cBGZ25
+      categoryUuid: fe141c64-6882-4ca2-adc7-75ac6b2733db
+      questionCardUuid: b078c504-cc6d-4733-9436-6eff1da4925f
+      locationUuid: f1ef2afb-1049-4340-90ff-da90239c8880
+    dataPropertyOrder:
+      "&":
+        - baseurl
+        - user
+        - password
+        - categoryUuid
+        - questionCardUuid
+        - locationUuid
+    color: null
+    isPrivate: false
+    metaSortKey: 1651863494362
+    _type: environment

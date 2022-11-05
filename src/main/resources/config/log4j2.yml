@@ -1,0 +1,76 @@
+# Author: Nam Vu -->
+# Log4j2 lookups documentation:
+#   https://logging.apache.org/log4j/2.x/manual/configuration.html#YAML
+#   https://logging.apache.org/log4j/2.x/manual/lookups.html
+#   Examples: https://logging.apache.org/log4j/2.x/manual/migration.html
+# non-casensitive
+
+configuration:
+  properties:
+    property:
+      -
+        name: projectName
+        value: freshAir-ws
+      -
+        name: basePath
+        value: ${sys:catalina.base:-.}
+      -
+        name: logPath
+        value: ${sys:logPath:-${basePath}/logs}
+      -
+        name: logFileName
+        value: ${logPath}/${projectName}.log
+      -
+        name: logFilePattern
+        value: ${logPath}/${projectName}-%d{yyyy-MM-dd}-%i.log.gz
+      -
+        name: logInfoString
+        value: >
+          Log file path (current): ${logFileName}%nLog file path
+          (archived, if any): ${logPath}/${projectName}-%%d{yyyy-MM-dd}-%%i.log.gz
+      -
+        name: systemInfoString
+        value: ${java:runtime}%n${java:vm}%n${java:os}%n${java:hw}
+      -
+        name: namespace
+        value: com.junction2022
+        
+        
+  appenders:
+    console:
+      name: ConsoleOutput
+      target: SYSTEM_OUT
+      patternLayout:
+        header: ${logInfoString}%n${systemInfoString}%n
+        pattern: "%-5r %-5p [%-25c{1}] %m%n"
+    rollingFile:
+      name: FileOutput
+      fileName: ${logFileName}
+      filePattern: ${logFilePattern}
+      append: false
+      patternLayout:
+        header: ${logInfoString}%n${systemInfoString}%n
+        pattern: "%-5r %-5p [%-25c{1}] %m%n"
+      policies:
+        #	rollover on startup, daily and when the file reaches 10 MegaBytes
+        onStartupTriggeringPolicy: {}
+        sizeBasedTriggeringPolicy:
+          size: 10 MB
+        timeBasedTriggeringPolicy: {}
+    async:
+      name: CommonOutput
+      appenderRef:
+        - ref: ConsoleOutput
+        - ref: FileOutput
+        
+  loggers:
+    logger:
+      name: ${namespace}
+      level: debug
+      additivity: false
+      appenderRef:
+        ref: CommonOutput
+    root:
+      level: info
+      appenderRef:
+        ref: CommonOutput

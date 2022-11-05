@@ -1,0 +1,77 @@
+# https://www.baeldung.com/spring-boot-configure-tomcat
+server:
+  port: 8088
+  servlet.context-path: /freshair-ws
+  error.whitelabel.enabled: true
+  
+logging.config: classpath:config/log4j2.yml
+   
+spring:
+
+  # https://www.baeldung.com/spring-boot-security-autoconfiguration
+  # https://www.baeldung.com/keycloak-embedded-in-spring-boot-app
+  # Disabled because it doesn't work with com.graphql-java-kickstart.
+  # Use class FreshAirWebSecurityConfigurerAdapter instead.
+  #  security:
+  #    user:
+  #      name: demo1
+  #      password: yqR2cBGZ
+  
+  # https://bezkoder.com/spring-boot-file-upload/
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  
+  mvc.dispatch-options-request: true
+
+         
+# https://github.com/graphql-java-kickstart/graphql-spring-boot/blob/master/README.md
+# https://github.com/graphql-java-kickstart/graphql-spring-boot/issues/83
+
+
+graphql:
+  servlet.exception-handlers-enabled: true
+  graphiql:
+    enabled: true
+
+
+# https://springdoc.org/springdoc-properties.html
+springdoc:
+  api-docs.path: /api-docs
+  paths-to-exclude: /config, /test/**
+  swagger-ui:
+    path: /swagger-ui
+    displayOperationId: true
+    displayRequestDuration: true
+    operationsSorter: alpha
+      
+# Use Jersey alongside Spring MVC
+# See: https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/howto-jersey.html
+#spring.jersey.type=filter
+
+freshair:
+  security:
+    users: []
+#      - name: demo
+#        password: yqR2cBGZ25
+#        roles: [USER]
+#      - name: demo-manager
+#        password: k3H8la7Bls
+#        roles: [USER, MANAGER]
+#      - name: demo-admin
+#        password: j5yqM9XcKe
+#        roles: [USER, MANAGER, ADMIN]
+  baseUri:
+    virtualBaseUri: https://freshAir.vtt.fi/
+    useActualBaseUriForHref: false
+  jenaProvider:
+    name: Virtuoso RDF store
+    className: fi.vtt.bimlinker.rdf.jena.provider.virtuoso.VirtuosoJenaProvider
+    serverUrl: jdbc:virtuoso://virtuoso:1111/charset=UTF-8/log_enable=2                  
+    #serverUrl: jdbc:virtuoso://freshAir.vtt.fi:1111/charset=UTF-8/log_enable=2
+    #serverUrl: jdbc:virtuoso://40.127.98.64:1111/charset=UTF-8/log_enable=2
+    #basicAuthorization: ZGF2OlBja1ZreFgyNDd0RDNaVDV6NTky
+    basicAuthorization: ZGJhOjJxc0g5aEhDN0I5TTN2bUh5cmU1
+    defaultGraphName: https://freshAir.vtt.fi/obj/defaultGraph
+    rdf11: false

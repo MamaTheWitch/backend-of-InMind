@@ -1,0 +1,116 @@
+#  ---
+- uuid: fe141c64-6882-4ca2-adc7-75ac6b2733db
+  code: S
+  name: Do I STRESS too much? 
+  shortName: STRESS
+  questions:
+    - text: How often do you get upset about small things?
+      uuid: 7d81f532-f61c-43f6-a83d-22231473d882
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you find it hard to calm down after facing an unpleasant situation?
+      uuid: e85862b8-264f-4556-8ba2-c5f561aef2ce
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel irritated?
+      uuid: 78b61cee-fde7-4a6b-9e3b-9ce045f711aa
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you worry about your health?
+      uuid: 58722e85-0dfe-46a0-b825-6e330b84e8b2
+      type: integer
+      min: 0
+      max: 3
+    - text: Is it hard for you to tolerate other people?
+      uuid: 1b50bde6-7779-4c21-a531-05a8c227c855
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you constantly worrying what others think about you?
+      uuid: f7a84913-7c0b-4c31-888f-bf6c0eafe627
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you sweat (or have sweaty palms) for no reason?
+      uuid: f5f36929-fafa-4278-9e57-6449941d86e7
+      type: integer
+      min: 0
+      max: 3
+    - text: How often can you sense your heart pounding when not exercising?
+      uuid: a235ec27-bdca-4f00-8c01-1a1801e13e13
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel out of breath?
+      uuid: 7115c482-9893-428e-81d0-38a21e7c09cb
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you find your legs shaking?
+      uuid: d7f85180-2357-4fbb-b0ef-bbd764dfde42
+      type: integer
+      min: 0
+      max: 3
+    
+#  ---
+- uuid: eabb1c4e-c90e-4a78-8d03-d957f9c56b8d
+  code: A
+  name: Do I ANXIETY too much? 
+  shortName: ANXIETY
+#  questions:
+#     - Is it hard for you to relax or sit still?
+#     - Do you have difficulties sleeping?
+#     - How often do you have stomach problems?
+#     - How often do you feel shortness of breath?
+#     - Do you have trembling hands?
+#     - How often do you feel dizzy and unstable?
+#     - How often do you feel like balancing on the edge?
+#     - Are you constantly irritated and easily become annoyed?
+#     - Are you constantly worrying about everything?
+#     - Are you having panic attacks or feeling overwhelmed often?  
+
+
+##  ---
+#- uuid: f8458efd-5977-4ca2-a36b-be4a19cafd7d
+#  code: EC
+#  name: KPIs in Economic Dimensions
+#  shortName: Economy
+#  fileName: question-cards-03-economy.yaml
+#  
+##  ---
+#- uuid: 20bd2bf0-b857-40a3-8ce0-40523932d874
+#  code: ICT
+#  name: KPIs in ICT Dimensions
+#  shortName: ICT
+#  fileName: question-cards-04-ict.yaml
+#  
+##  ---
+#- uuid: e70dcb16-3c46-4527-a132-f708a086548b
+#  code: M
+#  name: KPIs in Mobility Dimensions
+#  shortName: Mobility
+#  fileName: question-cards-05-mobility.yaml
+#  
+##  ---
+#- uuid: b4e30283-ca30-4d86-bc66-0399916f5eee
+#  code: S
+#  name: KPIs in Social Dimensions
+#  shortName: Society
+#  fileName: question-cards-06-society.yaml
+#  
+##  ---
+#- uuid: 46ad311d-81c3-41a0-a551-d4c70b9359e5
+#  code: G
+#  name: KPIs in Governance Dimension
+#  shortName: Governance
+#  fileName: question-cards-07-governance.yaml
+#  
+##  ---
+#- uuid: 9bcb0833-0873-40b3-877d-a81812f17afe
+#  code: P
+#  name: KPIs in Propagation Dimension
+#  shortName: Propagation
+#  fileName: question-cards-08-propagation.yaml

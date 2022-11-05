@@ -1,0 +1,46 @@
+- uuid: e46fe1ed-91c9-4e5d-8ec8-69f401ae5529
+  type: Country
+  name: Finland
+  description: ''
+  geoJsonId: EU/Finland
+  children:
+  - uuid: 741a7af4-45bb-4edc-a74c-67aa9c6e0126
+    name: Espoo
+    type: City
+    description: ''
+    geoJsonId: EU/Finland/Espoo
+    children:
+    - uuid: 342a8449-d9aa-45cc-9800-406e6274e237
+      name: Otaniemi
+      type: District
+      description: ''
+      geoJsonData:
+        type: Feature
+        geometry:
+          type: Point
+          coordinates:
+          - -67.13734351262877
+          - 45.137451890638886
+      children:
+      - uuid: ce8803b3-0417-4318-96a1-acbd5a56c658
+        name: Konemiehentie 2
+        type: Building
+        description: ''
+      - uuid: 14efecad-190d-44e6-903a-cc8c77cfc218
+        name: Location 1.1.1.2
+        type: Building
+        description: ''
+      - uuid: cb6a2e62-5518-4e80-bb6c-19817fda739d
+        name: Location 1.1.1.3
+        type: Building
+        description: ''
+  - uuid: cda22c46-4ae2-4911-8531-79bbe0458617
+    name: Helsinki
+    type: City
+    description: ''
+    children:
+    - uuid: b889a337-8952-4f30-bd05-ef95c69d8047
+      name: Itä keskus
+      type: District
+      description: ''
+      children: null

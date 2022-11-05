@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.junction2022</groupId>
+	<artifactId>fresh-air-services</artifactId>
+	<version>0.0.3</version>
+	<packaging>${packaging.type}</packaging>
+	<name>fresh-air-services</name>
+	<description>POCITYF Web services</description>
+
+	<properties>
+		<start-class>com.junction2022.FreshAirApplication</start-class>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>17</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<!-- VTT REPOSITORIES -->
+
+		<bimlinker.groupId>fi.vtt.bimlinker</bimlinker.groupId>
+		<bimlinker.version>0.6.0</bimlinker.version>
+
+		<!-- 3rd PARTY REPOSITORIES -->
+
+		<!-- HESI release artifactory, nl.tno.esdl:esdl -->
+		<!-- updated 21.04.2021 -->
+		<esdl.version>2.21.12</esdl.version>
+
+		<!-- CENTRAL REPOSITORIES -->
+
+		<!-- org.eclipse.emf:org.eclipse.emf.ecore -->
+		<!-- updated 21.04.2021 -->
+		<emf.version>2.16.0</emf.version>
+
+		<!-- com.graphql-java, updated 11.05.2022 -->
+		<graphql-java.version>17.3</graphql-java.version>
+
+		<!-- com.graphql-java-kickstart, updated 11.05.2022 -->
+		<graphql-java-kickstart.version>12.0.0</graphql-java-kickstart.version>
+
+		<!-- com.google.guava:guava, updated 08.04.2021 -->
+		<guava.version>30.1.1-jre</guava.version>
+
+		<!-- org.apache.jena:apache-jena-libs, updated 22.12.2021 -->
+		<jena.version>3.17.0</jena.version>
+
+		<!-- org.apache.logging.log4j:log4j -->
+		<!-- updated 21.04.2021 -->
+		<log4j2.version>2.17.2</log4j2.version>
+
+		<!-- updated 08.04.2021 -->
+		<lombok.version>1.18.22</lombok.version>
+
+		<!-- org.springframework.boot -->
+		<!-- updated 26.04.2021 -->
+		<springframework.boot.version>2.6.7</springframework.boot.version>
+
+		<!-- org.springdoc:springdoc-openapi-ui -->
+		<!-- updated 21.04.2021 -->
+		<springdoc.version>1.6.4</springdoc.version>
+
+		<!-- name.falgout.jeffrey:throwing-streams -->
+		<throwing-streams.version>3.2.0</throwing-streams.version>
+
+	</properties>
+
+	<profiles>
+
+		<!-- WAR profile -->
+		<profile>
+			<id>war</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<packaging.type>war</packaging.type>
+				<layout.type>WAR</layout.type>
+				<server.port>8080</server.port>
+			</properties>
+			<build>
+				<finalName>freshair</finalName>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<artifactId>maven-war-plugin</artifactId>
+							<version>3.2.3</version>
+							<configuration>
+								<warSourceDirectory>WebContent</warSourceDirectory>
+								<failOnMissingWebXml>false</failOnMissingWebXml>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+
+		<!-- JAR profile -->
+		<profile>
+			<id>jar</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<packaging.type>jar</packaging.type>
+				<layout.type>WAR</layout.type>
+				<server.port>8081</server.port>
+			</properties>
+		</profile>
+	</profiles>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- lombok dependency must be declared before spring-boot-dependencies -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			<!-- log4j dependency must be declared before spring-boot-dependencies -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-bom</artifactId>
+				<version>${log4j2.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springframework.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-starter-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- VTT -->
+		<dependency>
+			<groupId>fi.vtt.utils</groupId>
+			<artifactId>vtt-utils</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>${bimlinker.groupId}</groupId>
+			<artifactId>bimlinker-common</artifactId>
+			<version>${bimlinker.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>${bimlinker.groupId}</groupId>
+			<artifactId>bimlinker-data.rdf</artifactId>
+			<version>${bimlinker.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>${bimlinker.groupId}</groupId>
+					<artifactId>bimlinker-common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>${bimlinker.groupId}</groupId>
+			<artifactId>bimlinker-rdf.jena.provider</artifactId>
+			<version>${bimlinker.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>${bimlinker.groupId}</groupId>
+					<artifactId>bimlinker-common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>${bimlinker.groupId}</groupId>
+			<artifactId>bimlinker-rdf.jena.provider.virtuoso</artifactId>
+			<version>${bimlinker.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- Spring Boot -->
+		<!-- https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.logging -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!--
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-graphql</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		-->
+
+		<!-- springdoc -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
+
+		<!-- Logging -->
+		<!-- https://docs.spring.io/spring-boot/docs/1.5.x/reference/html/howto-logging.html -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+
+		<!-- GraphQL, https://github.com/graphql-java-kickstart/graphql-spring-boot -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>${graphql-java-kickstart.version}</version>
+		</dependency>
+
+		<!-- testing facilities -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter-test</artifactId>
+			<version>${graphql-java-kickstart.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+
+		<!-- ThrowingStream -->
+		<dependency>
+			<groupId>name.falgout.jeffrey</groupId>
+			<artifactId>throwing-streams</artifactId>
+			<version>${throwing-streams.version}</version>
+		</dependency>
+
+		<!-- GeoJson-Jackson -->
+		<dependency>
+			<groupId>de.grundid.opendatalab</groupId>
+			<artifactId>geojson-jackson</artifactId>
+			<version>1.14</version>
+		</dependency>
+
+		<!-- graphql-java-extended-scalars -->
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java</artifactId>
+			<version>${graphql-java.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>17.0</version>
+		</dependency>
+
+
+		<!-- Apache Jena (Core, ARQ, IRI, TDB) -->
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<type>pom</type>
+			<version>${jena.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Google Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+
+		<!-- ESDL, EMF -->
+
+		<dependency>
+			<groupId>nl.tno.esdl</groupId>
+			<artifactId>esdl</artifactId>
+			<version>${esdl.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+
+		<!-- Country Code -->
+		<dependency>
+			<groupId>com.neovisionaries</groupId>
+			<artifactId>nv-i18n</artifactId>
+			<version>1.29</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<!-- Must be declared before maven plugins -->
+			<!-- Example: https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-packaging -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${springframework.boot.version}</version>
+				<configuration>
+					<!--classifier>spring-boot</classifier-->
+					<mainClass>${start.class}</mainClass>
+					<layout>${layout.type}</layout>
+					<addResources>true</addResources>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<release>${java.version}</release>
+					<compilerArgs>
+						<!--arg>- -enable-preview</arg -->
+					</compilerArgs>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
+					<parameters>true</parameters>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<argLine>--enable-preview</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<argLine>--enable-preview</argLine>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+		<repository>
+			<id>hesi-releases</id>
+			<name>HESI release artifactory</name>
+			<url>https://ci.hesi.energy/artifactory/libs-release-local</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+</project>

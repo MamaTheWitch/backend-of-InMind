@@ -1,0 +1,13 @@
+scalar Uuid
+
+scalar Uri
+
+scalar UriOrId
+
+scalar RegEx
+
+scalar Upload
+
+scalar JSON
+
+scalar DateTime

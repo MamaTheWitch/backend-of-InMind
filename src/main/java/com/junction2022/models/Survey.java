@@ -29,7 +29,8 @@ public class Survey extends FreshAirEntity {
 	
 	private String fileName;
 	
-	private  List<Question> questions;
+	private List<Question> questions;
+	private List<MentalSuggestion> suggestions;
 	
 	public Optional<Question> getQuestionByUuid(final UUID questionUuid) {
 		return questions

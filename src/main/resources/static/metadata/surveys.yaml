@@ -54,6 +54,16 @@
       type: integer
       min: 0
       max: 3
+  suggestions:
+    - state: Mild 
+      maxPercentage: 30
+      text: Congratulations! You have NO OR VERY MILD stress level! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being @here!
+    - state: Moderate
+      maxPercentage: 60
+      text: Based on your answers, you seem to have MODERATE stress level. While we all feel stressed at times, if stress goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you relief your stress. Meanwhile, would you like to try our anonymous chat @here?
+    - state: Severe
+      maxPercentage: 100
+      text: Oh dear, you seem to be experiencing SEVERE stress. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi>      
     
 #  ---
 - uuid: eabb1c4e-c90e-4a78-8d03-d957f9c56b8d

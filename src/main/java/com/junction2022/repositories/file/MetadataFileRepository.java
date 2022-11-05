@@ -28,10 +28,9 @@ import com.junction2022.repositories.file.yaml.YamlUtils;
 public class MetadataFileRepository {
 
 	private static final String METADATA_FOLDER_PATH = "static/metadata/";
-	private static final String CATEGORIES_FILE_NAME = "categories.yaml";
+	private static final String CATEGORIES_FILE_NAME = "surveys.yaml";
 	private static final String[] LOCATIONS_FILE_NAMES =
 		{
-			"Portugal-normalized.esdl",
 			"services.yaml",
 		};
 

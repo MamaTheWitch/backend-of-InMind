@@ -4,8 +4,12 @@ package com.junction2022.views.rest;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.junction2022.common.exceptions.ResourceNotFoundException;
+import com.junction2022.models.MentalAssessment;
+import com.junction2022.models.MentalSuggestion;
 import com.junction2022.models.Question;
 import com.junction2022.models.Survey;
+import com.junction2022.models.SurveyResult;
+import com.junction2022.models.inputs.QuestionAnswerInput;
 import com.junction2022.repositories.file.MetadataFileRepository;
 
 import java.util.List;
@@ -14,6 +18,8 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -25,7 +31,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/survey")
 public class SurveyController {
 
-
+	@Autowired
+	MetadataFileRepository metadataFileRepository;
+	
 	@Autowired
 	MetadataFileRepository repository;
 
@@ -73,6 +81,32 @@ public class SurveyController {
 //		return questions;
 //	}
 
+	@PostMapping("{surveyUuid}/answer")
+	public MentalAssessment answerSurvey(
+			@PathVariable final String surveyUuid,
+			@RequestBody final List<QuestionAnswerInput> answers) {
+		final Survey survey =
+			metadataFileRepository
+				.getSurveySet()
+				.getSurvey(UUID.fromString(surveyUuid))
+				.orElseThrow(() -> new ResourceNotFoundException("Survey not found: " + surveyUuid));
 
+		final SurveyResult surveyResult = new SurveyResult(survey);
+		surveyResult.setAnswers(
+				answers
+					.stream()
+					.map(answer -> answer.toQuestionAnswer(survey))
+					.toList());
+		
+		final MentalAssessment assessment = new MentalAssessment();
+		assessment.setTotalPoint(surveyResult.getTotalPoint());
+		assessment.setMaxPoint(survey.getMaxPoint());
+		final double percentagePoint = 100.0 * assessment.getTotalPoint() / assessment.getMaxPoint();
+		assessment.setPercentagePoint(percentagePoint);
+		
+		final MentalSuggestion suggestion = survey.findSuggestionByPoint(percentagePoint);
+		assessment.setSuggestion(suggestion);
+		return assessment;
+	}
 
 }

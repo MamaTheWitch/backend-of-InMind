@@ -70,57 +70,391 @@
   code: A
   name: Do I ANXIETY too much? 
   shortName: ANXIETY
-#  questions:
-#     - Is it hard for you to relax or sit still?
-#     - Do you have difficulties sleeping?
-#     - How often do you have stomach problems?
-#     - How often do you feel shortness of breath?
-#     - Do you have trembling hands?
-#     - How often do you feel dizzy and unstable?
-#     - How often do you feel like balancing on the edge?
-#     - Are you constantly irritated and easily become annoyed?
-#     - Are you constantly worrying about everything?
-#     - Are you having panic attacks or feeling overwhelmed often?  
+  questions:
+    - text: Is it hard for you to relax or sit still?
+      uuid: 475eca01-7315-41ab-8971-f47068f6ff42
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you have difficulties sleeping?
+      uuid: eed6b1d7-28e6-4fb9-8a74-34301197ca5b
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you have stomach problems?
+      uuid: cf440ea4-2df6-4ae2-8395-0db56ad1c8f6
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel shortness of breath?
+      uuid: 687243c1-6b2d-4548-94b5-8a4465fce9ec
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you have trembling hands?
+      uuid: 6dab5987-e403-413f-9683-b0349040fc4c
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel dizzy and unstable?
+      uuid: 42d0482c-939c-4f94-9ba0-991eb814cef3
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel like balancing on the edge?
+      uuid: da7d2b24-ecf0-4d02-b409-e49b4f8347c1
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you constantly irritated and easily become annoyed?
+      uuid: 3901e996-8fb4-4970-9c9d-f9a39f610df3
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you constantly worrying about everything?
+      uuid: 75078ca9-304c-4757-b913-1eb326f6c269
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you having panic attacks or feeling overwhelmed often?
+      uuid: f4a0a061-60e5-4a94-99df-27d9ad0666da
+      type: integer
+      min: 0
+      max: 3
+  suggestions:
+    - state: Mild
+      maxPercentage: 30
+      text: Congratulations! You have NO OR VERY MILD level of anxiety! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being @here!
+    - state: Moderate
+      maxPercentage: 60
+      text: Based on your answers, you seem to have MODERATE anxiety. While we all feel anxious at times, if it goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you feel better. Meanwhile, would you like to try our anonymous chat @here?
+    - state: Severe
+      maxPercentage: 100
+      text: Oh dear, you seem to be experiencing SEVERE anxiety. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi> Meanwhile, you can try pressing the @Panic! button and taking a deep breath :)
+        
+- uuid: 3fde2b2f-30a5-4095-952f-9155095de1ca
+  code: P
+  name: Am I having a PANIC attack? 
+  shortName: PANIC
+  questions:
+    - text: Is it hard for you to relax or sit still?
+      uuid: 0d2495c1-966d-48c8-bc90-866c1297bf0e
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel teribly scared for no particular reason?
+      uuid: a49ca566-ccbc-4454-ac25-4edef13126a5
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel that something terrible is about to happen?
+      uuid: 1d795cf4-51cf-4a56-b1fd-c83e88262395
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you afraid that you might be having heart attack?
+      uuid: c4266b1a-7feb-40fd-a47a-e0f21001c324
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel like you are going crazy or loosing control?
+      uuid: 2d579823-8984-4ecb-9e86-d2cc14a6a9a3
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel that you can't inhale enough oxygen?
+      uuid: a8238ffc-2614-46cf-800b-96945f778aca
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel that you are about to faint?
+      uuid: 6fc5191e-e75d-4b4e-bf3e-e4d137483a5d
+      type: integer
+      min: 0
+      max: 3
+    - text: Is your heart racing like crazy?
+      uuid: 2215acd9-962f-4015-bb7e-62da9604bbae
+      type: integer
+      min: 0
+      max: 3
+    - text: Are you shaking and can't control it?
+      uuid: eaede7e0-310e-4ddf-8062-11f1f6b873f1
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel numbness or tingling in your body?
+      uuid: daee930d-111d-4373-8434-37da9a01b63a
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel detached from your body, like observing yourself from aside?
+      uuid: f3ad9bda-1ef1-432b-b164-334fc06bca6f
+      type: integer
+      min: 0
+      max: 3
+  suggestions:
+    - state: Mild
+      maxPercentage: 30
+      text: Based on your answers, it's NOT VERY LIKELY you are having a panic attack right now. However, if you feel overwhelmed or anxious, you can try pressing the @Panic! button and taking a deep breath :)
+    - state: Severe
+      maxPercentage: 100
+      text: Oh dear, you seem to be experiencing a PANIC ATTACK. Good news - it's not dangerous at all and you're not gonna die! Adrenaline rushing through your blood makes the heart beat faster, and quick breathing brings elevated levels of oxygen to your brain, which might make you feel dizzy. It's called hyperventilation. You can try to yawn 10 times, or press the @Panic! button and take a deep breath. It will pass. Don't worry and try to distract your mind by focusing on some object that you see now. Later, you might want to consider seeing a therapist to discuss how to cope with it in the future. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
 
 
-##  ---
-#- uuid: f8458efd-5977-4ca2-a36b-be4a19cafd7d
-#  code: EC
-#  name: KPIs in Economic Dimensions
-#  shortName: Economy
-#  fileName: question-cards-03-economy.yaml
-#  
-##  ---
-#- uuid: 20bd2bf0-b857-40a3-8ce0-40523932d874
-#  code: ICT
-#  name: KPIs in ICT Dimensions
-#  shortName: ICT
-#  fileName: question-cards-04-ict.yaml
-#  
-##  ---
-#- uuid: e70dcb16-3c46-4527-a132-f708a086548b
-#  code: M
-#  name: KPIs in Mobility Dimensions
-#  shortName: Mobility
-#  fileName: question-cards-05-mobility.yaml
-#  
-##  ---
-#- uuid: b4e30283-ca30-4d86-bc66-0399916f5eee
-#  code: S
-#  name: KPIs in Social Dimensions
-#  shortName: Society
-#  fileName: question-cards-06-society.yaml
-#  
-##  ---
-#- uuid: 46ad311d-81c3-41a0-a551-d4c70b9359e5
-#  code: G
-#  name: KPIs in Governance Dimension
-#  shortName: Governance
-#  fileName: question-cards-07-governance.yaml
-#  
-##  ---
-#- uuid: 9bcb0833-0873-40b3-877d-a81812f17afe
-#  code: P
-#  name: KPIs in Propagation Dimension
-#  shortName: Propagation
-#  fileName: question-cards-08-propagation.yaml
+- uuid: fa7a7548-eebc-4dad-9c0a-d585b6f30395
+  code: AD
+  name: Do I have ADHD? 
+  shortName: ADHD
+  questions:
+    - text: Do you find it difficult to concentrate on one task?
+      uuid: c47a2b47-4877-4152-a577-2cb2569a62a9
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you find it difficult to concentrate on one task?
+      uuid: 2f67e788-98a1-4483-92d9-a23a16f3be53
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel that the task is too complex for you?
+      uuid: 38b9d0d3-063b-470d-99a0-c8209cb15351
+      type: integer
+      min: 0
+      max: 3
+    - text: Is it difficult for you to finish a task or a project?
+      uuid: fff345c8-e4dc-4387-9fb4-96b89d1d1cb0
+      type: integer
+      min: 0
+      max: 3
+    - text: Is it hard for you to organise yourself or your time?
+      uuid: 67275464-6605-424e-82a8-937ebbf73608
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you hesitate to start a task that requires concentration?
+      uuid: e1b27f3a-dc57-405b-a823-f43af55fd3ab
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you constantly feel the urge to do something, as if driven by a motor?
+      uuid: 23e8ae33-a873-49bf-9c5b-d835002b41cf
+      type: integer
+      min: 0
+      max: 3
+    - text: How hard for you is to sit still?
+      uuid: 22eb8b66-3a6e-4ee5-88a5-6c31e63fa74c
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you make decisions instantly, without thinking through the consequences?
+      uuid: 8b915350-87f4-42e7-8409-862d9f8a67c3
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel like missing what is being said by others in a conversation?
+      uuid: 6a179438-e71a-4264-8dc4-54e54024fcef
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you find it hard to remember your promise or appointment?
+  suggestions:
+    - state: Mild
+      maxPercentage: 30
+      text: Based on your answers, it's NOT VERY LIKELY you have ADHD. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+    - state: Severe
+      maxPercentage: 100
+      text: Your answers align with ADHD in adults. We recommend seeing a professional to discuss how to cope with it. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+
+- uuid: d863e11a-fa0c-4745-a93e-d00df43dd7f6
+  code: D
+  name: Is my bad mood already a DEPRESSION?
+  shortName: DEPRESSION
+  questions:
+    - text: Do you constantly feel sad or about to burst into tears?
+      uuid: 4567bfd0-6add-4167-a828-7e05e4697e2b
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel like a complete failure?
+      uuid: c85fbda6-a001-4307-b091-dc3ebd957430
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel lacking satisfaction or joy about what you do?
+      uuid: 2a3bdd54-66b7-44df-9f62-d56a23a6562b
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel guilty about bad things happening in your life?
+      uuid: ff18240e-07bf-4dbc-b85d-d820fdc659e7
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you feel so tired, that you don’t have the energy to do anything.
+      uuid: 323d1ee8-2296-4447-8073-0196bf16bd29
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel disconnected and are not interested in other people’s lives at all?
+      uuid: 17d84d3a-07a3-45a7-a1d7-ad7cd318d92d
+      type: integer
+      min: 0
+      max: 3
+    - text: Is it hard for you to make even small decisions in your life?
+      uuid: 2e179c49-6496-469e-b6a6-5cdfd89ce176
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you find yourself ugly or feel or disgusted about yourself?
+      uuid: e02b74f9-5973-4427-bd28-9748f271aa86
+      type: integer
+      min: 0
+      max: 3
+    - text: How severe are recent changes in your apetite or sleep?
+      uuid: d1adc5dd-7935-4ec6-b8c3-3e9f4c778326
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel hopeless and thought about ending your life?
+  suggestions:
+    - state: Mild
+      maxPercentage: 25
+      text: Congratulations! You have NO OR VERY MILD depression. However, embracing healthy habits will improve your mental well-being, so you might want to check some tips @here!
+    - state: Moderate
+      maxPercentage: 50
+      text: Based on your answers, you seem to have MODERATE depression. If untreated, it can lead to more serious conditions. We recommend talking to a therapist or calling the mental-health help line @NUMBER. Meanwhile, would you like to try our anonymous chat @here?
+    - state: Severe
+      maxPercentage: 100
+      text: Oh dear, you seem to be experiencing SEVERE depression. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi> Embracing healthy habits in general can help improve your mental well-being, so you might want to check some tips @here!
+
+- uuid: 76766351-cc1e-40ff-9aea-6fa43a8e695e
+  code: B
+  name: Are my mood swings a BIPOLAR disorder?
+  shortName: BIPOLAR
+  questions:
+    - text: Do you sometimes talk much more and faster than usual?
+      uuid: 76afe36d-db2c-43d0-b83a-41805fca0fa5
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you sometimes feel like you actually have superpowers and can do anything?
+      uuid: 7c7de623-7784-4641-b89c-8b56a26b402b
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you sometimes have an overwhelming feeling where you are both depressed and hyped at the same time?
+      uuid: 124fe313-94e4-4406-8ba2-3d3aab7cd459
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel that amount of work you get done, and the quality of it, varies a lot depending on your mood?
+      uuid: 73dfa086-276f-4b2c-8405-aac2283048ca
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you have periods of really low mood followed by happiness and euphoria?
+      uuid: d7aa5afc-57ec-470e-9094-25d35da86188
+      type: integer
+      min: 0
+      max: 3
+    - text: How often people say that you speak or laugh too loud, or cry too often?
+      uuid: 06c4c067-f926-4900-8e20-7a707470e836
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you constantly feel swinging between being very optimistic about life, and feeling hopeless?
+      uuid: 7b30628b-67e1-4b05-81a3-ed6ad5280b22
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you sometimes feel much more interested in sex than usual?
+      uuid: 1b111fac-6ea8-4f01-8fb6-2e8793e6832d
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you sometimes find yourself so angry that you can't control yourself?
+      uuid: 1180031d-8087-412a-a2f8-69a0df1d2092
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you constantly find yourself swinging between super-creative mode to a completely "empty" head?
+      uuid: e22482e2-94bf-45ad-a4d4-64446e80a56d
+      type: integer
+      min: 0
+      max: 3
+  suggestions:
+    - state: Mild
+      maxPercentage: 25
+      text: Based on your answers, you're NOT suffering from a BIPOLAR mood disorder. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+    - state: Moderate
+      maxPercentage: 50
+      text: Based on your answers, it's POSSIBLE that you have a BIPOLAR mood disorder. However, it's important to remember that bipolar disorder is a complex mental health condition, and the symptoms can vary hugely across different types of bipolar. Even if you're not suffering from strong feelings of mania or depression, it's still possible that you could have bipolar. The symptoms can also be very similar to other mental health conditions, so an accurate diagnosis is a crucial first step. Seek professional help for further guidance.
+    - state: Severe
+      maxPercentage: 100
+      text: Based on your answers, it's VERY LIKELY that you have a BIPOLAR mood disorder. However, it's important to remember that bipolar disorder is a complex mental health condition, and the symptoms can vary hugely across different types of bipolar. Even if you're not suffering from strong feelings of mania or depression, it's still possible that you could have bipolar. The symptoms can also be very similar to other mental health conditions, so an accurate diagnosis is a crucial first step. Seek professional help for further guidance.
+
+- uuid: 14497b19-39a4-4ac7-a3e3-b0680e1c4b1e
+  code: O
+  name: Is it my personality or OCD?
+  shortName: OCD
+  questions:
+    - text: Do you avoid throwing things away, afraid you might need them later?
+      uuid: f5329e64-4287-4f62-b1d4-2f8c96846cdc
+      type: integer
+      min: 0
+      max: 3
+    - text: How much do you feel your home is stuffed with unnecesary things?
+      uuid: e1d65943-3eee-4904-99fd-eee20d53cc62
+      type: integer
+      min: 0
+      max: 3
+    - text: Do feel you check on things more often than others?
+      uuid: 109acad5-1144-49f3-9ca0-1c6c677821a6
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you repeatedly check water tap, light switches, cabinets, doors after locking them?
+      uuid: 59711b66-ab70-4986-8594-f88f5e955406
+      type: integer
+      min: 0
+      max: 3
+    - text: Is it difficult for you to touch things that other (or particular) people have touched?
+      uuid: a6004679-6b19-4c0c-9a59-28e8da940543
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel that there are good and bad numbers? Do you try to avoid the bad ones?
+      uuid: 0dbb6eda-3a61-4b4a-97f9-2b6eba565cbc
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you sometimes feel the urge to take a shower or wash your hands for no particular reason?
+      uuid: ac9d9609-55d1-46b9-ba4a-d57ec75ea8b4
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you have unpleasant, intrusive thoughts that you can't control?
+      uuid: 9a167825-d877-4eab-bb5a-6772bde2338c
+      type: integer
+      min: 0
+      max: 3
+    - text: How often do you get obsessive thoughts and you are unable to get rid of them?
+      uuid: 247a694e-7b58-4dc8-ac21-a54bee112670
+      type: integer
+      min: 0
+      max: 3
+    - text: Do you feel bad if things are not arranged in a particular way, or someone rearranges them?
+      uuid: 6edc3e93-1a44-48c0-b0e9-ae1594582803
+      type: integer
+      min: 0
+      max: 3
+  suggestions:
+    - state: Mild
+      maxPercentage: 30
+      text: Based on your answers, you're NOT suffering from an OCD. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+    - state: Moderate
+      maxPercentage: 60
+      text: Based on your answers, it's POSSIBLE that you have an OCD. We would suggest seeking help for the symptoms you are experiencing. OCD is a complex disorder which can present in many different forms. It’s important to screen for other conditions, such as anxiety and depression as these are very common for people who have OCD.
+    - state: Severe
+      maxPercentage: 100
+      text: Based on your answers, it's VERY LIKELY that you have an OCD. We would suggest seeking help for the symptoms you are experiencing. OCD is a complex disorder which can present in many different forms. It’s important to screen for other conditions, such as anxiety and depression as these are very common for people who have OCD.

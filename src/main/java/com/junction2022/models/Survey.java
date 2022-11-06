@@ -24,10 +24,12 @@ public class Survey extends FreshAirEntity {
 	public static final Comparator<Survey> COMPARATOR_BY_UUID =
 			Comparator.nullsFirst(Comparator.comparing(Survey::getUuid));
 
+	@JsonIgnore
 	private String code;
 	private String name;
 	private String shortName;
 	
+	@JsonIgnore
 	private String fileName;
 	
 	private List<Question> questions;

@@ -57,13 +57,13 @@
   suggestions:
     - state: Mild 
       maxPercentage: 30
-      text: Congratulations! You have NO OR VERY MILD stress level! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being @here!
+      text: Congratulations! You have NO OR VERY MILD stress level! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being!
     - state: Moderate
       maxPercentage: 60
-      text: Based on your answers, you seem to have MODERATE stress level. While we all feel stressed at times, if stress goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you relief your stress. Meanwhile, would you like to try our anonymous chat @here?
+      text: Based on your answers, you seem to have MODERATE stress level. While we all feel stressed at times, if stress goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you relief your stress. Meanwhile, would you like to try our anonymous chat?
     - state: Severe
       maxPercentage: 100
-      text: Oh dear, you seem to be experiencing SEVERE stress. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi>      
+      text: Oh dear, you seem to be experiencing SEVERE stress. You might want to consider seeing a therapist, or calling the mental-health help line +358 9 2525 0111 <mieli.fi>      
     
 #  ---
 - uuid: eabb1c4e-c90e-4a78-8d03-d957f9c56b8d
@@ -124,13 +124,13 @@
   suggestions:
     - state: Mild
       maxPercentage: 30
-      text: Congratulations! You have NO OR VERY MILD level of anxiety! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being @here!
+      text: Congratulations! You have NO OR VERY MILD level of anxiety! However, if you feel you would want to feel even better, try browsing our hand-picked exercises to improve your mental well-being!
     - state: Moderate
       maxPercentage: 60
-      text: Based on your answers, you seem to have MODERATE anxiety. While we all feel anxious at times, if it goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you feel better. Meanwhile, would you like to try our anonymous chat @here?
+      text: Based on your answers, you seem to have MODERATE anxiety. While we all feel anxious at times, if it goes on for too long, or gets more severe, it can lead to more serious conditions. Talking to a therapist, or even a good friend can help you feel better. Meanwhile, would you like to try our anonymous chat?
     - state: Severe
       maxPercentage: 100
-      text: Oh dear, you seem to be experiencing SEVERE anxiety. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi> Meanwhile, you can try pressing the @Panic! button and taking a deep breath :)
+      text: Oh dear, you seem to be experiencing SEVERE anxiety. You might want to consider seeing a therapist, or calling the mental-health help line +358 9 2525 0111 <mieli.fi>  Meanwhile, you can try pressing the Panic! button and taking a deep breath :)
         
 - uuid: 3fde2b2f-30a5-4095-952f-9155095de1ca
   code: P
@@ -195,10 +195,10 @@
   suggestions:
     - state: Mild
       maxPercentage: 30
-      text: Based on your answers, it's NOT VERY LIKELY you are having a panic attack right now. However, if you feel overwhelmed or anxious, you can try pressing the @Panic! button and taking a deep breath :)
+      text: Based on your answers, it's NOT VERY LIKELY you are having a panic attack right now. However, if you feel overwhelmed or anxious, you can try pressing the Panic! button and taking a deep breath :)
     - state: Severe
       maxPercentage: 100
-      text: Oh dear, you seem to be experiencing a PANIC ATTACK. Good news - it's not dangerous at all and you're not gonna die! Adrenaline rushing through your blood makes the heart beat faster, and quick breathing brings elevated levels of oxygen to your brain, which might make you feel dizzy. It's called hyperventilation. You can try to yawn 10 times, or press the @Panic! button and take a deep breath. It will pass. Don't worry and try to distract your mind by focusing on some object that you see now. Later, you might want to consider seeing a therapist to discuss how to cope with it in the future. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+      text: Oh dear, you seem to be experiencing a PANIC ATTACK. Good news - it's not dangerous at all and you're not gonna die! Adrenaline rushing through your blood makes the heart beat faster, and quick breathing brings elevated levels of oxygen to your brain, which might make you feel dizzy. It's called hyperventilation. You can try to yawn 10 times, or press the Panic! button and take a deep breath. It will pass. Don't worry and try to distract your mind by focusing on some object that you see now. Later, you might want to consider seeing a therapist to discuss how to cope with it in the future. Meanwhile, you can try our friendly journaling bot to start tracking your progress!
 
 
 - uuid: fa7a7548-eebc-4dad-9c0a-d585b6f30395
@@ -260,10 +260,10 @@
   suggestions:
     - state: Mild
       maxPercentage: 30
-      text: Based on your answers, it's NOT VERY LIKELY you have ADHD. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+      text: Based on your answers, it's NOT VERY LIKELY you have ADHD. Meanwhile, you can try our friendly journaling bot to start tracking your progress!
     - state: Severe
       maxPercentage: 100
-      text: Your answers align with ADHD in adults. We recommend seeing a professional to discuss how to cope with it. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+      text: Your answers align with ADHD in adults. We recommend seeing a professional to discuss how to cope with it. Meanwhile, you can try our friendly journaling bot to start tracking your progress!
 
 - uuid: d863e11a-fa0c-4745-a93e-d00df43dd7f6
   code: D
@@ -319,20 +319,20 @@
   suggestions:
     - state: Mild
       maxPercentage: 25
-      text: Congratulations! You have NO OR VERY MILD depression. However, embracing healthy habits will improve your mental well-being, so you might want to check some tips @here!
+      text: Congratulations! You have NO OR VERY MILD depression. However, embracing healthy habits will improve your mental well-being, so you might want to check some tips at the place called Upgrade Youor Mind!
     - state: Moderate
       maxPercentage: 50
-      text: Based on your answers, you seem to have MODERATE depression. If untreated, it can lead to more serious conditions. We recommend talking to a therapist or calling the mental-health help line @NUMBER. Meanwhile, would you like to try our anonymous chat @here?
+      text: Based on your answers, you seem to have MODERATE depression. If untreated, it can lead to more serious conditions. We recommend talking to a therapist or calling the mental-health help line +358 9 2525 0111 <mieli.fi>  Meanwhile, would you like to try our anonymous chat?
     - state: Severe
       maxPercentage: 100
-      text: Oh dear, you seem to be experiencing SEVERE depression. You might want to consider seeing a therapist, or calling the mental-health help line @NUMBER. <mieli.fi> Embracing healthy habits in general can help improve your mental well-being, so you might want to check some tips @here!
+      text: Oh dear, you seem to be experiencing SEVERE depression. You might want to consider seeing a therapist, or calling the mental-health help line +358 9 2525 0111 <mieli.fi>  Embracing healthy habits in general can help improve your mental well-being, so you might want to check some tips  at the place called Upgrade Youor Mind!
 
 - uuid: 76766351-cc1e-40ff-9aea-6fa43a8e695e
   code: B
   name: Are my mood swings a BIPOLAR disorder?
   shortName: BIPOLAR
   questions:
-    - text: Do you sometimes talk much more and faster than usual?
+    - text: Do  you sometimes talk much more and faster than usual?
       uuid: 76afe36d-db2c-43d0-b83a-41805fca0fa5
       type: integer
       min: 0
@@ -385,7 +385,7 @@
   suggestions:
     - state: Mild
       maxPercentage: 25
-      text: Based on your answers, you're NOT suffering from a BIPOLAR mood disorder. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+      text: Based on your answers, you're NOT suffering from a BIPOLAR mood disorder. Meanwhile, you can try our friendly journaling bot to start tracking your progress!
     - state: Moderate
       maxPercentage: 50
       text: Based on your answers, it's POSSIBLE that you have a BIPOLAR mood disorder. However, it's important to remember that bipolar disorder is a complex mental health condition, and the symptoms can vary hugely across different types of bipolar. Even if you're not suffering from strong feelings of mania or depression, it's still possible that you could have bipolar. The symptoms can also be very similar to other mental health conditions, so an accurate diagnosis is a crucial first step. Seek professional help for further guidance.
@@ -451,7 +451,7 @@
   suggestions:
     - state: Mild
       maxPercentage: 30
-      text: Based on your answers, you're NOT suffering from an OCD. Meanwhile, you can try our friendly journaling bot to start tracking your progress @here!
+      text: Based on your answers, you're NOT suffering from an OCD. Meanwhile, you can try our friendly journaling bot to start tracking your progress!
     - state: Moderate
       maxPercentage: 60
       text: Based on your answers, it's POSSIBLE that you have an OCD. We would suggest seeking help for the symptoms you are experiencing. OCD is a complex disorder which can present in many different forms. It’s important to screen for other conditions, such as anxiety and depression as these are very common for people who have OCD.
